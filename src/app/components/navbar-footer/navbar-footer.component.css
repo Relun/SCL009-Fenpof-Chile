@@ -1,0 +1,11 @@
+#navbarButton:active{
+    color: red;
+    }
+
+.main_title{
+    text-align: center;
+}
+
+.logo{
+    border-radius: 100%;
+}
