@@ -1,11 +1,49 @@
+/* Estilo general */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo del header */
+
+.logo{
+    clear:both;
+float: right;
+text-align: right;
+}
+/* 
+header{
+    background-attachment: fixed;
+    background-size: cover;
+} */
+
+/* Estilos del navbar */
 #navbarButton:active{
     color: red;
     }
 
 .main_title{
     text-align: center;
+    display: block;
+    margin: auto;
 }
 
 .logo{
+    width: 12em;
+    margin: 10% 0% 10% 50%;
+    border: .1em solid #000000;
     border-radius: 100%;
 }
+
+.navbar{
+    padding: 1.1em;
+}
+
+li{
+    margin-left: 4em;
+}
+
+/* @media (min-width: 768px) { 
+
+} */
