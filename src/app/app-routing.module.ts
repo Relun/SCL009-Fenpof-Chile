@@ -14,10 +14,6 @@ import { SupportComponent } from './components/support/support.component';
 
 
 
-
-
-
-
 const routes: Routes = [
   // en path vacio "" por mientras se carga contenido de about // considerar home 
   {path:"", component:AboutComponent },
