@@ -6,8 +6,8 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NavbarFooterComponent } from './components/navbar-footer/navbar-footer.component';
 
-//import { AngularFireModule } from '@angular/fire';
-//import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from 'src/environments/environment';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { LoginComponent } from './components/administrator/login/login.component';
@@ -19,7 +19,7 @@ import { EventsComponent } from './components/events/events.component';
 import { GaleryComponent } from './components/galery/galery.component';
 import { PublicPoliticsComponent } from './components/public-politics/public-politics.component';
 import { PostUserComponent } from './components/administrator/post-user/post-user.component';
-
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -38,9 +38,11 @@ import { PostUserComponent } from './components/administrator/post-user/post-use
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AngularFireStorageModule
-    //AngularFireModule.initializeApp(environment.firebase),
-    //AngularFirestoreModule
+    AngularFireStorageModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
