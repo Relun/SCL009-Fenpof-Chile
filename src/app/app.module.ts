@@ -1,12 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NavbarFooterComponent } from './components/navbar-footer/navbar-footer.component';
 
-import { AngularFireModule } from '@angular/fire';
+import { AngularFireModule } from '@angular/fire'; //ok
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from 'src/environments/environment';
 import { AngularFireStorageModule } from '@angular/fire/storage';
@@ -21,6 +21,13 @@ import { PublicPoliticsComponent } from './components/public-politics/public-pol
 import { PostUserComponent } from './components/administrator/post-user/post-user.component';
 import { FormsModule } from '@angular/forms';
 
+import { AngularFireAuth } from '@angular/fire/auth';
+import { AdminComponent } from './components/admin/admin.component';
+import { RegisterComponent } from './components/administrator/register/register.component';
+
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +40,9 @@ import { FormsModule } from '@angular/forms';
     EventsComponent,
     GaleryComponent,
     PublicPoliticsComponent,
-    PostUserComponent
+    PostUserComponent,
+    AdminComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -41,10 +50,10 @@ import { FormsModule } from '@angular/forms';
     AngularFireStorageModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
-    FormsModule
+    FormsModule                                                                                                                                                  
 
   ],
-  providers: [],
+  providers: [AngularFireAuth],
   bootstrap: [AppComponent]
 })
 
