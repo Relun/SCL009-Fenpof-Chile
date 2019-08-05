@@ -9,13 +9,11 @@ import { Component, OnInit } from '@angular/core';
 export class NavbarFooterComponent implements OnInit {
 
   // mostrar=false;
-  
     // loren(){ alert('loren');}
     //  loren: boolean = false;
 
     //  show(){
     //   this.loren=true;
-    
     // }
     mostrar:boolean;
   constructor() { }
