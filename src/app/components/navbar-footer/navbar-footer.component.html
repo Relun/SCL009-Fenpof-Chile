@@ -1,20 +1,21 @@
 <header>
 
   <!--  second-container imagen 2  100 % desde 800 px-->
-  <div clas="row square-image" >
+  <div clas="row square-image">
     <div class="col square-image">
-        <img  src="../../../assets/imgregistrelogin/fenprelo2.jpg" alt="logo Fenpof"  width=100% height= "150px" class="square-image" />
+      <img src="../../../assets/imgregistrelogin/fenprelo2.jpg" alt="logo Fenpof" width=100% height="150px"
+        class="square-image" />
     </div>
-  
+
   </div>
 
-    <!-- barra menu class : menu_bar   100% desde 600 px-->
+  <!-- barra menu class : menu_bar   100% desde 600 px-->
   <div class=" row menu_bar">
-    <a href="#" class="bt-menu"><img src="../../../assets/imgregistrelogin/menu.png" class="icon-img" alt="">   MENU</a>
+    <a href="#" class="bt-menu"><img src="../../../assets/imgregistrelogin/menu.png" class="icon-img" alt=""> MENU</a>
   </div>
 
 
-    <!-- div geeral header  - 1100 px hasta 800 
+  <!-- div geeral header  - 1100 px hasta 800 
          contiene imagen y tituto + frase-->
   <div class="row container-header">
 
@@ -36,19 +37,16 @@
 
     <nav>
       <ul>
-        <li><a href="Sobre nosotros">Sobre nosotros</a></li>
-        <li><a href="Información">Información</a></li>
-        <li><a href="Organizaciones">Organizaciones</a></li>
-        <li><a href="Acompañamiento">Acompañamiento</a></li>
-        <li><a href="Políticas públicas">Políticas públicas</a></li>
-        <li><a href="Galería">Galería</a></li>
+        <li><a href="Sobre nosotros" routerLink="/about" routerLinkActive="active">Sobre nosotros</a></li>
+        <li><a href="Información" routerLink="/information" routerLinkActive="active">Información</a></li>
+        <li><a href="Organizaciones" routerLink="/organization" routerLinkActive="active">Organizaciones</a></li>
+        <li><a href="Acompañamiento" routerLink="/support" routerLinkActive="active">Acompañamiento</a></li>
+        <li><a href="Políticas públicas" routerLink="/public" routerLinkActive="active">Políticas públicas</a></li>
+        <li><a href="Galería" routerLink="/galery" routerLinkActive="active">Galería</a></li>
         <li>LOGGED: {{isLogged}}</li>
-        <div class="logged" *ngIf= "isLogged">
+        <div class="logged" *ngIf="isLogged">
           <button (click)="onLogout()">salir</button>
         </div>
-      </ul>
+        <ul></ul>
     </nav>
-
-  </div>
-
 </header>
