@@ -11,9 +11,9 @@
         <div class="navbar-collapse" id="navbarContent">
           <ul class="navbar-nav auto">
     
-              <li class="nav-item" display="dynamic" placement="bottom-right">
-                  <a class="nav-link" style="cursor: pointer" ngbtn id="navbarButton" role="button">
-            Sobre nosotros
+              <li class="nav-item" display="dynamic" placement="bottom-right" *ngIf="!loren" routerLink="/about" >
+                  <a class="nav-link" style="cursor: pointer" ngbtn id="navbarButton" role="button" (click)="activar()" routerLinkActive="active"> 
+                      Sobre nosotros
                   </a>
               </li>
             
