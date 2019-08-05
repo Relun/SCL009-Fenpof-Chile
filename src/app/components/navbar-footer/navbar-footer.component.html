@@ -6,7 +6,6 @@
       <img src="../../../assets/imgregistrelogin/fenprelo2.jpg" alt="logo Fenpof" width=100% height="150px"
         class="square-image" />
     </div>
-
   </div>
 
   <!-- barra menu class : menu_bar   100% desde 600 px-->
@@ -18,12 +17,10 @@
   <!-- div geeral header  - 1100 px hasta 800 
          contiene imagen y tituto + frase-->
   <div class="row container-header">
-
     <div clas="col  ">
       <img src="../../../assets/img/fenpof.png" alt="logo Fenpof" class="logo" />
     </div>
-
-
+  </div>
 
 
 
@@ -37,16 +34,18 @@
 
     <nav>
       <ul>
-        <li><a href="Sobre nosotros" routerLink="/about" routerLinkActive="active">Sobre nosotros</a></li>
-        <li><a href="Información" routerLink="/information" routerLinkActive="active">Información</a></li>
-        <li><a href="Organizaciones" routerLink="/organization" routerLinkActive="active">Organizaciones</a></li>
-        <li><a href="Acompañamiento" routerLink="/support" routerLinkActive="active">Acompañamiento</a></li>
-        <li><a href="Políticas públicas" routerLink="/public" routerLinkActive="active">Políticas públicas</a></li>
-        <li><a href="Galería" routerLink="/galery" routerLinkActive="active">Galería</a></li>
+        <li><a href="Sobre nosotros" routerLink="/about" >Sobre nosotros</a></li>
+        <li><a href="Información" routerLink="/information" >Información</a></li>
+        <li><a href="Organizaciones" routerLink="/organization" >Organizaciones</a></li>
+        <li><a href="Acompañamiento" routerLink="/support" >Acompañamiento</a></li>
+        <li><a href="Políticas públicas" routerLink="/public" >Políticas públicas</a></li>
+        <li><a href="Galería" routerLink="/galery" >Galería</a></li>
         <li>LOGGED: {{isLogged}}</li>
+
         <div class="logged" *ngIf="isLogged">
           <button (click)="onLogout()">salir</button>
         </div>
-        <ul></ul>
+        
+      </ul>
     </nav>
 </header>
