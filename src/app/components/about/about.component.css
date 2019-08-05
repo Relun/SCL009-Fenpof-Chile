@@ -1,0 +1,19 @@
+.main_image_about {
+    margin-top: 2em;
+    /* padding-left: 2.5em; */
+  }
+  
+  .text_about {
+    margin-top: 4em;
+    padding-right: 5em;
+  }
+  
+  @media (min-width: 768px) {
+      .main_image_about{    
+          padding-left: 0%;
+      }   
+  
+      .text_about{
+          text-align: center;
+      }
+  }
