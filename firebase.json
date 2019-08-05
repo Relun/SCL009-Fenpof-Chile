@@ -4,11 +4,23 @@
     "indexes": "firestore.indexes.json"
   },
   "hosting": {
-    "public": "dist/SCL009-Fenpof-Chile",
+    "public": "dist/SCL-FENPOF-CHILE",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
     ]
+  },
+  "database": {
+    "rules": "database.rules.json"
+  },
+  "storage": {
+    "rules": "storage.rules"
   }
 }
