@@ -21,7 +21,7 @@ export class NavbarFooterComponent implements OnInit {
 
 
   ngOnInit() {
-    this.getCurrentUser();
+   this.getCurrentUser();
   }
 
   getCurrentUser(){
@@ -38,7 +38,7 @@ export class NavbarFooterComponent implements OnInit {
       }
 
     });
-  }
+  } 
 
 
   onLogout(){

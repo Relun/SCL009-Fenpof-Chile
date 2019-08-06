@@ -1,9 +1,9 @@
 
 export class Postuser {
-    public id: number;
+    public id: string;
     public post: string;
 
-      constructor(id: number,post: string) {
+      constructor(id: string,post: string) {
           this.id = id;
           this.post = post;
          
