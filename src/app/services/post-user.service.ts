@@ -25,7 +25,7 @@ this.commentaryCollection = this.afs.collection('commentary');  //Inicia la cole
      Mediante los metodos de firebase irá leyendo la coleccion que creo
      en el post y nos retornará lo escrito por el */
  getRead() {
-      this.commentaryCollection = this.afs.collection('commentary');   
+     // this.commentaryCollection = this.afs.collection('commentary');   
       this.commentary = this.commentaryCollection.snapshotChanges().pipe(map((changes => {
         return changes.map(a => {
           const data = a.payload.doc.data() as Postuser;
@@ -35,6 +35,7 @@ this.commentaryCollection = this.afs.collection('commentary');  //Inicia la cole
       });
       })
       ));
+      console.log(this.commentary);
         return this.commentary; 
     
     }
@@ -50,7 +51,8 @@ addPost(postuser : Postuser) {
     
     this.commentaryCollection.add(
                             {   id : postuser.id,
-                                post : postuser.post
+                                post : postuser.post,
+                                date : postuser.date
                               }
                                 
                               ).then( _ => alert("Post creado") ); // add es una promesa de firebase

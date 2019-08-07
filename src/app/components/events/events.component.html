@@ -1,1 +1,23 @@
-<p>events works!</p>
+<p>Aqui van los eventos publicados!</p>
+
+<section>
+    <main >
+            <div *ngIf="postusers?.length > 0; else noCommentary" >
+                    <ul *ngFor="let postuser of postusers" > 
+                        <div >
+                       <h5>{{postuser.date}}</h5> 
+                       <h5>{{postuser.post}}</h5> 
+                
+                       <div>
+                              <!--  <button class="btn-menu" (click)="deleteOrder(order)">Borrar</button> -->
+                   </div>
+                        </div>
+            
+   </ul>
+</div> 
+<ng-template #noCommentary>
+       <h5>Cargando los post</h5>
+     </ng-template>    
+    </main>
+                                       
+</section>

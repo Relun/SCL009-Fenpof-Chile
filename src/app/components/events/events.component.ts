@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PostUserService } from '../../services/post-user.service'
+import {Postuser} from '../../post-user'
 
 @Component({
   selector: 'app-events',
@@ -6,10 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./events.component.css']
 })
 export class EventsComponent implements OnInit {
+  
+  postusers:Postuser[];
 
-  constructor() { }
+  constructor(public postUserService: PostUserService) { }
+
 
   ngOnInit() {
+    this.postUserService.getRead().subscribe(postuser =>{
+           this.postusers = postuser; 
+           console.log(this.postusers);
+    });
   }
 
 }
