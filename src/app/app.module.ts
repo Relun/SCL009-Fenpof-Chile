@@ -10,6 +10,9 @@ import { AngularFireModule } from '@angular/fire'; //ok
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from 'src/environments/environment';
 import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+
+
 import { LoginComponent } from './components/administrator/login/login.component';
 import { AboutComponent } from './components/about/about.component';
 import { InformationComponent } from './components/information/information.component';
@@ -20,11 +23,16 @@ import { GaleryComponent } from './components/galery/galery.component';
 import { PublicPoliticsComponent } from './components/public-politics/public-politics.component';
 import { PostUserComponent } from './components/administrator/post-user/post-user.component';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AdminComponent } from './components/admin/admin.component';
 import { RegisterComponent } from './components/administrator/register/register.component';
-
+//denisse
+import { HttpClientModule } from '@angular/common/http';
+import { ImagesComponent } from './components/administrator/images/images.component';
+import { ImageListComponent } from './components/administrator/images/image-list/image-list.component';
+import { ImageComponent } from './components/administrator/images/image/image.component';
 
 
 
@@ -42,7 +50,10 @@ import { RegisterComponent } from './components/administrator/register/register.
     PublicPoliticsComponent,
     PostUserComponent,
     AdminComponent,
-    RegisterComponent
+    RegisterComponent,
+    ImagesComponent,
+    ImageListComponent,
+    ImageComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +61,10 @@ import { RegisterComponent } from './components/administrator/register/register.
     AngularFireStorageModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
-    FormsModule                                                                                                                                                  
+    FormsModule,
+    HttpClientModule,
+    AngularFireDatabaseModule,
+    ReactiveFormsModule                                                                                                                                                   
 
   ],
   providers: [AngularFireAuth],

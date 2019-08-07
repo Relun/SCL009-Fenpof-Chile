@@ -1,6 +1,13 @@
 <h1>Seccion del administrador</h1>
 <div class="conteinerPostUser">
   <div class="text-post">
+<!--    <span ng-non-bindable>{{1288323623006 | date:"MM/dd/yyyy 'at' h:mma"}}</span>:
+      <span>{{'1288323623006' | date:"MM/dd/yyyy 'at' h:mma"}}</span><br>
+
+      <input #scheduledStartDate="ngModel" [(ngModel)]="reposition.scheduledStartDate"
+name="scheduledStartDate" id="scheduledStartDate" class="input is-normal"
+type="date" required placeholder="Leaving...">
+-->  
 
     <textarea #createPost id="description" placeholder="Escriba aqui su noticia" cols="60" rows="10"
       class="text-adm"></textarea>
@@ -12,3 +19,28 @@
     <!--<button id="clearPost" type="button" class="btnPost" >Eliminar</button>-->
   </div>
 </div>
+
+
+<h1>Eventos que has publicado</h1>
+
+<section>
+    <main >
+            <div *ngIf="postusers?.length > 0; else noCommentary" >
+                    <ul *ngFor="let postuser of postusers" > 
+                        <div >
+                       <h5>{{postuser.date}}</h5> 
+                       <h5>{{postuser.post}}</h5> 
+                
+                       <div>
+                              <!--  <button class="btn-menu" (click)="deleteOrder(order)">Borrar</button> -->
+                   </div>
+                        </div>
+            
+   </ul>
+</div> 
+<ng-template #noCommentary>
+       <h5>Cargando los post</h5>
+     </ng-template>    
+    </main>
+                                       
+</section>

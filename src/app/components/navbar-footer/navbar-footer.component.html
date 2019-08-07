@@ -1,39 +1,49 @@
 <header>
+  <div class="container">
+    <!--   I    -->
+    <div clas="row">
+      <div class="col">
+        <div class="row">
+          <div class="col-lg-2 col-md-2  first-img">
+            <img src="../../../assets/img/fenpof.png" alt="logo Fenpof" class="logo" />
+          </div>
 
-  <!--  second-container imagen 2  100 % desde 800 px-->
-  <div clas="row square-image">
-    <div class="col square-image">
-      <img src="../../../assets/imgregistrelogin/fenprelo2.jpg" alt="logo Fenpof" width=100% height="150px"
-        class="square-image" />
+          <div class="col-lg-10 col-md-10   main_title ">
+            <h1 class="">FENPOF</h1>
+            <hr>
+            <h4 class="">Federación de enfermedades poco frecuentes</h4>
+          </div>
+
+          <div class="col menu_bar">
+            <div class="row  ">
+
+              <div class="col-2 ico-men">
+                <a href="#" class="bt-menu"><img src="../../../assets/imgregistrelogin/menu.png" class="icon-img"
+                    alt=""></a>
+              </div>
+              <div class="col-10 title-men">
+                <h3>Menu</h3>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- barra menu class : menu_bar   100% desde 600 px-->
-  <div class=" row menu_bar">
-    <a href="#" class="bt-menu"><img src="../../../assets/imgregistrelogin/menu.png" class="icon-img" alt=""> MENU</a>
-  </div>
+</header>
 
 
-  <!-- div geeral header  - 1100 px hasta 800 
-         contiene imagen y tituto + frase-->
-  <div class="row container-header">
-    <div clas="col  ">
-      <img src="../../../assets/img/fenpof.png" alt="logo Fenpof" class="logo" />
-    </div>
-  </div>
+<!--   II    -->
 
 
-
-    <div class="col col-md-7 col-sm-12 col-xs-12 main_title ">
-      <h1 class="c">FENPOF</h1>
-      <h4>Federación de enfermedades poco frecuentes</h4>
-    </div>
-
-
-
-
-    <nav>
+<nav>
+  <div class="row perro">
+    <div class="col  ">
       <ul>
+<<<<<<< HEAD
         <li><a href="Sobre nosotros" routerLink="/about" >Sobre nosotros</a></li>
         <li><a href="Información" routerLink="/information" >Información</a></li>
         <li><a href="Organizaciones" routerLink="/organization" >Organizaciones</a></li>
@@ -46,6 +56,44 @@
           <button (click)="onLogout()">salir</button>
         </div>
         
+=======
+        <li><a href="Sobre nosotros" routerLink="/about">Sobre nosotros</a></li>
+        <li><a href="Información" routerLink="/information">Información</a></li>
+        <li><a href="Organizaciones" routerLink="/organization">Organizaciones</a></li>
+        <li><a href="Acompañamiento" routerLink="/support">Acompañamiento</a></li>
+        <li><a href="Políticas públicas" routerLink="/public">Políticas públicas</a></li>
+        <li><a href="Galería" routerLink="/galery">Galería</a></li>
+>>>>>>> 1b7e6c5891b55803041f4df99ee802ac99188bdf
       </ul>
-    </nav>
-</header>
+    </div>
+  </div>
+</nav>
+<div class="logged" *ngIf="isLogged">
+  <li>LOGGED: {{isLogged}}</li>
+  <button (click)="onLogout()">salir</button>
+</div>
+
+<!-- barra menu class : menu_bar   100% desde 600 px-->
+<!-- div geeral header  - 1100 px hasta 800 
+         contiene imagen y tituto + frase-->
+<!--   II    -->
+<!--
+  <div class="row">
+      <nav>
+        <ul>
+          <li><a href="Sobre nosotros" routerLink="/about">Sobre nosotros</a></li>
+          <li><a href="Información" routerLink="/information">Información</a></li>
+          <li><a href="Organizaciones" routerLink="/organization">Organizaciones</a></li>
+          <li><a href="Acompañamiento" routerLink="/support">Acompañamiento</a></li>
+          <li><a href="Políticas públicas" routerLink="/public">Políticas públicas</a></li>
+          <li><a href="Galería" routerLink="/galery">Galería</a></li>
+          <li>LOGGED: {{isLogged}}</li>
+  
+          <div class="logged" *ngIf="isLogged">
+            <button (click)="onLogout()">salir</button>
+          </div>
+  
+        </ul>
+      </nav>
+    </div>
+  -->

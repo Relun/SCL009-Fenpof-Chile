@@ -15,7 +15,7 @@ export class NavbarFooterComponent implements OnInit {
   constructor( private authService: AuthService, private afsAuth: AngularFireAuth) { }
 
   ngOnInit() {
-    this.getCurrentUser();
+   this.getCurrentUser();
   }
 
   getCurrentUser(){
@@ -32,7 +32,7 @@ export class NavbarFooterComponent implements OnInit {
       }
 
     });
-  }
+  } 
 
   onLogout(){
     this.afsAuth.auth.signOut();
