@@ -6,179 +6,232 @@
 }
 
 /* Estilo del header */
-/*componentes /tamaño por rango :                
+/*componentes /tamaño por rango :      
+         o k  imagen circulo                aparece en los 1100 px hasta los 800            
               imagen cuadrada width 100%    aparece en los 800  px hasta los 600
               barra menu class : menu_bar   aparece en los 600 px 100%
               menu despegable               aparece en los 600 px 
               titulo                        aparece en los 1100 px hasta los 600
-              imagen circulo                aparece en los 1100 px hasta los 800     
+                 
                  */
 /*header -->
+          a) **  div - container header  (img 1 + h1 + h4 )
           a) **  div - img 2 cuadrada 
           b) **  div - menu bar con icon font ||| (horizontal)
-          c) **  div - container header  (img 1 + h1 + h4 )
+
 */
 
+
+/*     a) ----> o k      initial        */
 header {
   width: 95%;
   margin: auto;
 }
 
-/*  a)  */
-.square-image{
+/* c ) */
+header div .first-img {
+  display: block;
+  padding: 0.5em;
+}
+
+.logo {
+  display: block;
+  width: 11em;
+  border: .1em solid #000000;
+  border-radius: 100%;
+  margin: auto;
+  /*clear: both;
+  */
+  /*
+  margin: 12% 0% 10% 50%;*/
+}
+
+.main_title {
+  display: block;
+  text-align: center;
+  display: block;
+  margin: auto;
+}
+.menu_bar {
   display: none;
+}
+
+@media (max-width:1000px) {
+  .menu_bar {
+    display: none;
+  }
+  .logo {
+    display: block;
+    width: 8em;
+    border: .1em solid #000000;
+    border-radius: 100%;
+    margin: auto;
+    /*clear: both;
+    */
+    /*
+    margin: 12% 0% 10% 50%;*/
+  }
+}
+
+/*     a) ----> o k      finish        */
+
+@media (max-width:800px) {
+  nav {
+    position: relative;
+   /* bottom:6em;*/
+  }
+  .menu_bar {
+    display: none;
+  }
+
+  header {
+    margin: 1em auto;
+    background: #A2C7E2;
+    width: 100%;
+  }
+
+  header div .first-img {
+    display: none;
+  }
+
+  .main_title {
+
+    color: antiquewhite;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+  }
+
+  h1 {
+    margin: 0.5em;
+  }
+
+  h4 {
+    margin: 1.01em;
+  }
+}
+
+
+@media (max-width:700px) {
+ 
+  .menu_bar {
+    display: none;
+  } 
+
+  header {
+    margin: 0 auto;
+    background: #A2C7E2;
+    width: 100%;
+  }
+
+  header div .first-img {
+    display: none;
+  }
+
+  .main_title {
+    color: #fff;
+    font-weight: bold;
+    opacity: 1.5;
+    display: flex;
+    justify-content: center;
+  }
+
+  h1 {
+    margin-block-start: 0.2em;
+    margin-block-end: 0.2em;
+    margin-inline-start: 0.3em;
+    margin-inline-end: 0px;
+  }
+
+  h4 {
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+  }
+
+
+}
+
+
+@media (max-width:600px) {
+  .menu_bar {
+    display: block ;
+  }
+
+  
+
+  .title-men {
+    color:#fff;
+    font-weight: bold;
+  }
+
+  h3{
+    margin-left: 65%;
+  }
+
+
+  div .ico-men .icon-img{
+    margin-left: 1em;
+    margin-bottom: 0.2em;
+    margin-top: 0.2em;
+  }
+  header {
+    display: block;
+    margin: 0 auto;
+    background: #A2C7E2;
+    width: 100%;
+  }
+
+  header div .first-img {
+    display: none;
+  }
+
+  header .main_title {
+    display: none;
+  }
+
+
+
+
 }
 
 /* Estilos del navbar */
 /* b ) */
-header div nav {
-  width: 90%;
-  margin: 20px auto;
-  max-width: 1100px;
-  background: #00CD89;
+nav {
+  width: 100%;
+  margin: 0 auto;
+  background: #A2C7E2;
   color: antiquewhite;
 }
+
 
 #navbarButton:active {
   color: red;
 }
 
-header nav ul {
+ nav div ul {
   overflow: hidden;
   list-style: none;
+
 }
 
-header nav ul li {
+ nav div ul li {
   float: left;
+
 }
 
-header nav ul li a {
+nav div ul li a {
+  margin-left: 1em;
   color: #212F3D;
   padding: 10px;
   display: block;
   text-decoration: none;
+ 
 }
 
-header nav ul li a:hover {
+ nav div ul li a:hover {
   background: #0f5a4b;
   color: #000000;
 }
 
-/* icon menu para funcion menu despegable */
-.menu_bar {
-  display: none;
-}
-.icon-img {
-  padding: 2%;
-}
-
-
-/* c ) */
-.logo {
-  clear: both;
-  float: right;
-  text-align: right;
-  width: 11em;
-  margin: 12% 0% 10% 50%;
-  border: .1em solid #000000;
-  border-radius: 100%;
-}
-
-.main_title {
-  text-align: center;
-  display: block;
-  margin: auto;
-}
-
-/*     @media  para tamaños **  ver intervalo de lineas de 8 a las 26 ** */
-
- @media (max-width:860px) { 
-  .main_title{
-    display:none
-  }
-  .logo{
-    display: none
-  }
-  .square-image{
-    display: block
-  }
-
-  header nav {
-    position: relative;
-    bottom:6em;
-  }
-} 
-
-@media (max-width:800px) { 
-  .square-image{
-    height: 100px;
-  
-  }
-  .menu_bar{
-    background: #00CD89;
-  }
-  header nav {
-    position: relative;
-    top:0em;
-    width: 100%;
-  }
-  header nav ul li a {
-  
-    padding: 10px;
-
-  }
-} 
-
-@media (max-width:650px) { 
-
-  .square-image{
-    display: none;
-  }
-
-  .menu_bar{
-   
-    display:block; border: 0.05em solid #1F6D7E;
-  }
-
-  header div nav {
-    top:3.5em;
-    width: 80%;
-    height: auto;
-    margin: 0;
-    position:fixed;
-
-    background: #00CD89;
-    border: 0.05em solid  #1F6D7E;
-    color: antiquewhite;
-  }
-
-  header div ul li {
-    display: block;
-    float:none;
-    border: 0.05em solid  rgba(255, 255, 255, 0.3);
-  }
-  
-  
-  .menu_bar{
-    position: relative;
-    width: 84%;
-  }
-
-  .menu_bar .bt-menu{
-    display: block;
-    padding: 1%;
-    text-decoration: none;
-    font-weight: bold;
-    font-size:25px;
-    color:#212F3D;
-    box-sizing: border-box;
-
-  }
-  
-  /* P E N D I E N T E
-  .menu_bar span {
-    float: right;
-    font-size:40px;
-  }*/
-
-} 

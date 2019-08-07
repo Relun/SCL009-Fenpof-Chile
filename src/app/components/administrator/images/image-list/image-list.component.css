@@ -1,15 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-* {
-    margin: 0;
-    padding: 0;
-}
-/* You can add global styles to this file, and also import other style files */
-.container-fluid{
-    margin: 0 auto;
-}
 .imagebox {
-    max-width: 350px;
-    max-height: 300px;
     background: black;
     padding: 0px;
     position: relative;
@@ -19,7 +9,7 @@
   
   .imagebox img {
     opacity: 1;
-    transition: 0.5s opacity;
+    transition: 0.1s opacity;
   }
   
   .imagebox .imagebox-desc {
@@ -30,9 +20,10 @@
     left: 0px;
     padding: 10px 15px;
     position: absolute;
-    transition: 0.5s padding;
+    transition: 0.5s padding;  
     text-align: center;
     width: 100%;
+
   }
   
   .imagebox:hover img {

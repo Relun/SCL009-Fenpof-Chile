@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-//import { NavbarFooterComponent } from './components/navbar-footer/navbar-footer.component';
+
 import { AboutComponent } from './components/about/about.component';
 import { LoginComponent } from './components/administrator/login/login.component';
 import { EventsComponent } from './components/events/events.component';
@@ -10,32 +10,43 @@ import { OrganizationComponent } from './components/organization/organization.co
 import { PublicPoliticsComponent } from './components/public-politics/public-politics.component';
 import { PostUserComponent } from './components/administrator/post-user/post-user.component';
 import { SupportComponent } from './components/support/support.component';
-//denisse
-import { AdminComponent } from './components/admin/admin.component';
-//denisse
+
+
 import { RegisterComponent } from './components/administrator/register/register.component';
 
+import { AdminComponent } from './components/admin/admin.component';
+import { ImageListComponent } from './components/administrator/images/image-list/image-list.component';
+import { ImageComponent } from './components/administrator/images/image/image.component';
 
 
 
 const routes: Routes = [
   // en path vacio "" por mientras se carga contenido de about // considerar home 
-  {path:"", component:AboutComponent },
-  {path:"about", component: AboutComponent},
-  // denisee
-  {path:"administrator/login", component: LoginComponent},
+  { path: "", component: AboutComponent },
+  { path: "about", component: AboutComponent },
 
-  {path:"administrator/post", component: PostUserComponent},
-  {path:"events", component: EventsComponent},
-  {path:"galery", component: GaleryComponent},
-  {path:"information", component: InformationComponent},
-  {path:"organization", component: OrganizationComponent},
-  {path:"public", component: PublicPoliticsComponent},
-  {path:"support", component: SupportComponent},
-  //denisse
-  {path:"admin", component: AdminComponent},
-   // denisse
-  {path:"administrator/register", component:RegisterComponent}
+  { path: "administrator/login", component: LoginComponent },
+
+  { path: "administrator/post", component: PostUserComponent },
+  { path: "events", component: EventsComponent },
+  { path: "galery", component: GaleryComponent },
+  { path: "information", component: InformationComponent },
+  { path: "organization", component: OrganizationComponent },
+  { path: "public", component: PublicPoliticsComponent },
+  { path: "support", component: SupportComponent },
+
+  { path: "admin", component: AdminComponent },
+
+  { path: "administrator/register", component: RegisterComponent },
+
+  { path: "administrator/admin", component: AdminComponent },
+
+ /* { path: "image", component: ImagenesComponent},*/
+  { path: "image/upload", component: ImageComponent },
+  { path: "image/list", component: ImageListComponent }
+
+
+
 ];
 
 
