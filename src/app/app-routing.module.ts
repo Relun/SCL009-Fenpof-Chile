@@ -29,7 +29,7 @@ const routes: Routes = [
 
   { path: "administrator/post", component: PostUserComponent },
   { path: "events", component: EventsComponent },
-  { path: "galery", component: GaleryComponent },
+  { path: "galery", component: ImageListComponent },
   { path: "information", component: InformationComponent },
   { path: "organization", component: OrganizationComponent },
   { path: "public", component: PublicPoliticsComponent },
