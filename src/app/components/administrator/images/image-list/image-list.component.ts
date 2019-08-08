@@ -19,7 +19,9 @@ export class ImageListComponent implements OnInit {
 
   imageList: any[];
   rowIndexArray: any[];
+
   public isLogged: boolean = false;
+  
   constructor(private service: ImageService, private authService: AuthService, private router: Router, private afsAuth: AngularFireAuth) { }
 
 
