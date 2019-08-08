@@ -2,10 +2,11 @@
     width: 150px; height: 100px;
 
 }
-
+.aaa{
+    background: white;
+}
 .container-fluid{
     margin:3rem;
-
 }
 
 h3{
