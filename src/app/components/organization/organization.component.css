@@ -2,3 +2,18 @@
     width: 150px; height: 100px;
 
 }
+.aaa{
+    background: white;
+}
+.container-fluid{
+    margin:3rem;
+}
+
+h3{
+    color:blue;
+}
+
+p{
+    color: black; 
+    font-weight: bold;
+}
