@@ -1,3 +1,29 @@
-<h1>File Upload</h1>
-<input type="file" class="type" (change)="onFileSelected($event)">
-<button type="button" (click)="onUpload()">upload</button>
+<!--  *ngIf=""
+-->
+
+
+<div class="container"  >
+        <div class="row">
+          <div class="col-12">
+            <h1 class="title">Bienvenido a Admin FENPOF!</h1>
+          </div>
+        </div>
+     
+        <div class="row">
+          <div class="col-12">
+              <div class="row">
+                <div class="col-12">
+                    <p> Recuerda que puedes:</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6 col-12">
+                    <a class="btn btn-primary btn-block" data-toggle="tab" href="#" [routerLink]="['/']">Subir Eventos</a>
+                </div>
+                <div class="col-sm-6 col-12">
+                    <a class="btn btn-primary btn-block" data-toggle="tab" href="#" [routerLink]="['/galery']">Subir Imágenes</a>
+                </div>
+              </div>
+          </div>
+        </div>
+       </div>

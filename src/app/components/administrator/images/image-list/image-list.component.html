@@ -1,15 +1,23 @@
 <app-images></app-images>
+<hr class="line-h">
 <div class="container-fluid">
     <table *ngIf="imageList">
         <tr *ngFor="let i of rowIndexArray">
-          <td>
-            <div class="imagebox" *ngIf="i==0">
+          <td class="aaaa">
+            <div class="imagebox" *ngIf="i==0 && isLogged">
               <a routerLink="/image/upload">
-                <img src="../../../../../assets/img/localhost_4200_waiter(Large Tablet (landscape)) (1).png" class="img-fluid">
-                <span class="imagebox-desc">Insert New Image</span></a>
+                <img *ngIf="isLogged" src="./../../../../../assets/imgregistrelogin/image_placeholder.jpg" class="img-fluid" height="350px">
+               
+                <span class="imagebox-desc">Inserta una nueva Imagen</span></a>
             </div>
+            <div class="imagebox" *ngIf="i==0 && !isLogged ">
+                <a routerLink="/image/upload">
+                
+                  <img  src="./../../../../../assets/imgregistrelogin/l.jpg" class="img-fluid">
+                  <span class="imagebox-desc">APEC 2019</span></a>
+              </div>
             <div class="imagebox" *ngIf="i!=0">
-              <img [src]="imageList[3*i-1].imageUrl" class="img-fluid">
+              <img [src]="imageList[3*i-1].imageUrl" class="img-fluid especific-img">
               <span class="imagebox-desc">{{imageList[3*i-1].caption}}</span>
             </div>
           </td>

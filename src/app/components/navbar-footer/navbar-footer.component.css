@@ -235,3 +235,71 @@ nav div ul li a {
   color: #000000;
 }
 
+
+/* Estilos del navbar */
+/* b ) */
+
+
+.nav__links{
+  list-style: none;
+  background:#A2C7E2;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  }
+  
+  .nav__links ul li {
+    position: relative;
+  }
+  
+  .nav__links li{
+  display: inline-block;
+    }
+  
+    .nav__links a {
+      text-decoration: none;
+      color: #000;
+      width:200px;
+      display: block;
+      padding: 15px;
+      font-size: 17px;
+      font-family:sans-serif;
+      
+    }
+  
+  
+    .nav__links a:hover {
+      background:#5F8FE0;
+      color: #000;
+      border-radius: 6%;
+      
+    }
+
+    /*       A D M I N       */
+    .logged{
+      background: #A2C7E2;
+      justify-content: flex-end;
+      margin-top: 1%;
+      padding-top: 1%;
+      padding-bottom: 1%;
+     
+    }
+
+    .btn-log button {
+      width: 150px;
+      padding: 0.1em;
+      background: #fff;
+      border-radius:4%;
+      border: 1px solid #5F8FE0;
+    }
+    
+  
+ .children{
+      display:none;
+      position: absolute;
+    }
+
+    .children:hover{
+      display: block;
+      position: absolute;
+    }

@@ -1,0 +1,18 @@
+.form-upload{
+    background: #E7EDF8;
+    height: 150px;
+    /*IMPORTANTE*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.upload{
+    background: #BED0EE;
+  
+    margin-top: 200px;
+    border: 1em solid #A9CCE3;  
+}
+
+
