@@ -3,23 +3,17 @@ import { AuthService } from 'src/app/services/auth.service';
 import { AngularFireAuth } from '@angular/fire/auth';
 
 
-
-
 @Component({
   selector: 'app-navbar-footer',
   templateUrl: './navbar-footer.component.html',
   styleUrls: ['./navbar-footer.component.css']
 })
 
-
 export class NavbarFooterComponent implements OnInit {
   public isLogged: boolean = false;
   public adminLetter: string = "";
 
-
-
   constructor( private authService: AuthService, private afsAuth: AngularFireAuth) { }
-
 
   ngOnInit() {
    this.getCurrentUser();
@@ -42,12 +36,9 @@ export class NavbarFooterComponent implements OnInit {
     });
   } 
 
-
   onLogout(){
     this.afsAuth.auth.signOut();
   }
-
-
 
 
 }
