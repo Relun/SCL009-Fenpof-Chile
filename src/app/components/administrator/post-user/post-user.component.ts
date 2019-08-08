@@ -29,7 +29,7 @@ export class PostUserComponent implements OnInit {
    /*llamar a la funcion del servicio, para indicarle que debe enviar este post
     a firebase*/
     console.log(mypost);
-    this.createPost = new Postuser('0', mypost, 'fecha1'); // crear una nueva instancia en cada post
+    this.createPost = new Postuser('0', mypost); // crear una nueva instancia en cada post
     //this.createPost.post = mypost;
 
 

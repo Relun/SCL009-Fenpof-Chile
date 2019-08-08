@@ -51,8 +51,7 @@ addPost(postuser : Postuser) {
     
     this.commentaryCollection.add(
                             {   id : postuser.id,
-                                post : postuser.post,
-                                date : postuser.date
+                                post : postuser.post                          
                               }
                                 
                               ).then( _ => alert("Post creado") ); // add es una promesa de firebase

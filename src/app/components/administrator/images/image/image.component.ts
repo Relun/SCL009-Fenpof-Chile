@@ -3,6 +3,9 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { AngularFireStorage } from '@angular/fire/storage';
 import { finalize } from 'rxjs/operators';
 import { ImageService } from 'src/app/shared/image.service';
+import { AuthService } from 'src/app/services/auth.service';
+import { AngularFireAuth } from '@angular/fire/auth';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -15,11 +18,13 @@ export class ImageComponent implements OnInit {
   imgSrc: string;
   selectedImage: any = null;
   isSubmitted: boolean;
+  public isLogged: boolean = false;
 
-  constructor(private storage: AngularFireStorage, private service: ImageService) { }
+  constructor(private storage: AngularFireStorage, private service: ImageService,private authService: AuthService, private afsAuth: AngularFireAuth, private router: Router) { }
 
   ngOnInit() {
     this.resetForm();
+    this.getCurrentUser();
   }
 
   formTemplate = new FormGroup({
@@ -29,6 +34,23 @@ export class ImageComponent implements OnInit {
 
   })
 
+  getCurrentUser(){
+
+    this.authService.isAuth().subscribe(auth => {
+
+      if(auth){
+        console.log('user logged');
+        this.isLogged = true;
+       
+
+      } else {
+        console.log('user NOT logged');
+        this.isLogged = false;
+        this.router.navigate(['about']);
+      }
+
+    });
+  } 
 
   showPreview(event: any) {
 

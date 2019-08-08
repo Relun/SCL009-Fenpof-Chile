@@ -11,6 +11,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
 
 export class NavbarFooterComponent implements OnInit {
   public isLogged: boolean = false;
+  public adminLetter: string = "";
 
   constructor( private authService: AuthService, private afsAuth: AngularFireAuth) { }
 
@@ -25,6 +26,7 @@ export class NavbarFooterComponent implements OnInit {
       if(auth){
         console.log('user logged');
         this.isLogged = true;
+        this.adminLetter = "Activo";
 
       } else {
         console.log('user NOT logged');

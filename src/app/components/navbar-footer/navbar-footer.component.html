@@ -5,7 +5,7 @@
       <div class="col">
         <div class="row">
           <div class="col-lg-2 col-md-2  first-img">
-            <img src="../../../assets/img/fenpof.png" alt="logo Fenpof" class="logo" />
+            <img src="../../../assets/img/logon.jpg" alt="logo Fenpof" class="logo" />
           </div>
 
           <div class="col-lg-10 col-md-10   main_title ">
@@ -39,46 +39,30 @@
 <!--   II    -->
 
 
-<nav>
-  <div class="row perro">
-    <div class="col  ">
-      <ul>
-        <li><a href="Sobre nosotros" routerLink="/about">Sobre nosotros</a></li>
-        <li><a href="Información" routerLink="/information">Información</a></li>
-        <li><a href="Organizaciones" routerLink="/organization">Organizaciones</a></li>
-        <li><a href="Acompañamiento" routerLink="/support">Testimonios</a></li>
-        <li><a href="Políticas públicas" routerLink="/events">Eventos</a></li>
-        <li><a href="Galería" routerLink="/galery">Galería</a></li>
+
+<div >
+  <ul class="nav__links">
+    <li><a href="Sobre nosotros" routerLink="/about">Sobre nosotros</a></li>
+    <li><a href="Información" routerLink="/information">Información</a>
+      <ul class="children">
+        <li><a href="">informacion A</a></li>
+        <li><a href="">informacion B</a></li>
       </ul>
-    </div>
-  </div>
-</nav>
-<div class="logged" *ngIf="isLogged">
-  <li>LOGGED: {{isLogged}}</li>
-  <button (click)="onLogout()">salir</button>
+    </li>
+    <li><a href="Organizaciones" routerLink="/organization">Organizaciones</a></li>
+    <li><a href="Acompañamiento" routerLink="/support">Testimonios</a></li>
+    <li><a href="Políticas públicas" routerLink="/events">Eventos</a></li>
+    <li><a href="Galería" routerLink="/galery">Galería</a></li>
+  </ul>
 </div>
 
-<!-- barra menu class : menu_bar   100% desde 600 px-->
-<!-- div geeral header  - 1100 px hasta 800 
-         contiene imagen y tituto + frase-->
-<!--   II    -->
-<!--
-  <div class="row">
-      <nav>
-        <ul>
-          <li><a href="Sobre nosotros" routerLink="/about">Sobre nosotros</a></li>
-          <li><a href="Información" routerLink="/information">Información</a></li>
-          <li><a href="Organizaciones" routerLink="/organization">Organizaciones</a></li>
-          <li><a href="Acompañamiento" routerLink="/support">Acompañamiento</a></li>
-          <li><a href="Políticas públicas" routerLink="/public">Políticas públicas</a></li>
-          <li><a href="Galería" routerLink="/galery">Galería</a></li>
-          <li>LOGGED: {{isLogged}}</li>
-  
-          <div class="logged" *ngIf="isLogged">
-            <button (click)="onLogout()">salir</button>
-          </div>
-  
-        </ul>
-      </nav>
-    </div>
-  -->
+<div class="row logged" *ngIf="isLogged">
+  <div col="col-4"></div>
+  <div class="col-3 log">
+    <li>Administrador: <b> {{ adminLetter }}</b></li>
+
+  </div>
+  <div class="col-3 btn-log">
+    <button (click)="onLogout()">Cerrar Sesión</button>
+  </div>
+</div>
