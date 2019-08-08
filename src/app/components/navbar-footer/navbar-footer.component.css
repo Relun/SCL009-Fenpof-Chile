@@ -37,8 +37,8 @@ header div .first-img {
 .logo {
   display: block;
   width: 11em;
-  border: .1em solid #000000;
-  border-radius: 100%;
+
+  border-radius: 2%;
   margin: auto;
   /*clear: both;
   */
