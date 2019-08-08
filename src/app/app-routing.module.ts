@@ -19,7 +19,6 @@ import { ImageListComponent } from './components/administrator/images/image-list
 import { ImageComponent } from './components/administrator/images/image/image.component';
 
 
-
 const routes: Routes = [
   // en path vacio "" por mientras se carga contenido de about // considerar home 
   { path: "", component: AboutComponent },
