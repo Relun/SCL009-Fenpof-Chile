@@ -1,6 +1,15 @@
+/*.container-title{
+    width: 800px;
+    margin-bottom: 300;
+}
 .card {
-    width: 300px
+    width: 300px;
+    margin: auto;
 }
 .img-card {
     height: 200px; width: 80%; display: block;
 }
+.margen-post{
+    width: 800px;
+    margin: auto;
+}*/

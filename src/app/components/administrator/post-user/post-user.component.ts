@@ -53,13 +53,20 @@ export class PostUserComponent implements OnInit {
    /*llamar a la funcion del servicio, para indicarle que debe enviar este post
     a firebase*/
     console.log(mypost);
-    this.createPost = new Postuser('0', mypost); // crear una nueva instancia en cada post
+    this.createPost = new Postuser('0', mypost, 'fire'); // crear una nueva instancia en cada post
     //this.createPost.post = mypost;
 
 
     console.log(this.createPost);
     this.postUserService.addPost(this.createPost); 
-  
   }
+    /*Elimina el ID de Firestore */
+    deleteCommentary(postuser:Postuser) {
+      const response = confirm('¿Quieres eliminar esta publicacion?');
+      if (response ) {
+        this.postUserService.deletePost(postuser);
+      }
+      return;
+    }
 
 }

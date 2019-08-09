@@ -29,7 +29,7 @@ this.commentaryCollection = this.afs.collection('commentary');  //Inicia la cole
       this.commentary = this.commentaryCollection.snapshotChanges().pipe(map((changes => {
         return changes.map(a => {
           const data = a.payload.doc.data() as Postuser;
-             data.id = a.payload.doc.id;
+             data.idFireStore = a.payload.doc.id;
               console.log(data);
           return data;    
       });
@@ -51,10 +51,23 @@ addPost(postuser : Postuser) {
     
     this.commentaryCollection.add(
                             {   id : postuser.id,
+                                idFireStore : '',
                                 post : postuser.post                          
                               }
                                 
                               ).then( _ => alert("Post creado") ); // add es una promesa de firebase
     }
-  
+
+
+     /* Elimina el post de events. Para esto es necesario usar el ID que me entrega
+  firestore y así eliminarlo desde esta base de datos */
+  deletePost(postuser: Postuser) {
+    this.commentaryDoc = this.afs.doc(`commentary/${postuser.idFireStore}`);
+    this.commentaryDoc.delete();
+      // .then( _ => alert('te quedaste sin comida'))
+      // .catch(_ => alert('no pude eliminar'));
+  }
+
+
+   
 }
