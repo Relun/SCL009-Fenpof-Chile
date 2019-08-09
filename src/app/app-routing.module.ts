@@ -10,6 +10,7 @@ import { OrganizationComponent } from './components/organization/organization.co
 import { PublicPoliticsComponent } from './components/public-politics/public-politics.component';
 import { PostUserComponent } from './components/administrator/post-user/post-user.component';
 import { SupportComponent } from './components/support/support.component';
+import {HomeComponent } from './components/home/home.component';
 
 
 import { RegisterComponent } from './components/administrator/register/register.component';
@@ -21,7 +22,8 @@ import { ImageComponent } from './components/administrator/images/image/image.co
 
 const routes: Routes = [
   // en path vacio "" por mientras se carga contenido de about // considerar home 
-  { path: "", component: AboutComponent },
+  { path: "", component: HomeComponent },
+  { path: "home", component: HomeComponent },
   { path: "about", component: AboutComponent },
 
   { path: "administrator/login", component: LoginComponent },

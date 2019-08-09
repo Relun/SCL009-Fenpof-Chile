@@ -16,6 +16,5 @@ export class OrgService {
     return of(DATA);
   }
 
-
 }
 

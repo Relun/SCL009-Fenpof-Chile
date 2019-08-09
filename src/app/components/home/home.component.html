@@ -1,0 +1,81 @@
+<section class="event_testimony row justify-content-between">
+  
+  <!-- Eventos -->
+  <div class="show_events col col-md-7">
+    <h2>Eventos</h2>
+    <ul>
+      <div class="card bg-light mb-3 container">
+        <div class="card-header">
+          <h5>Lorem ipsum dolor sit</h5>
+          <h5>amet consectetur adipisicing elit.
+            Eius praesentium aliquam nostrum</h5>
+        </div>
+        <div class="card-body">
+          <img class="img-card container" src="assets/img-carousel/caca.png" alt="Card image">
+          <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing
+            elit. Quae accusantium, ducimus animi sint pariatur cumque! Beatae enim
+            commodi eum, incidunt tempora esse mollitia quo id. Ullam non autem consequatur omnis?</p>
+        </div>
+      </div>
+    </ul>
+    <ul>
+        <div class="card bg-light mb-3 container">
+          <div class="card-header">
+            <h5>Lorem ipsum dolor sit</h5>
+            <h5>amet consectetur adipisicing elit.
+              Eius praesentium aliquam nostrum</h5>
+          </div>
+          <div class="card-body">
+            <img class="img-card container" src="assets/img-carousel/caca.png" alt="Card image">
+            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing
+              elit. Quae accusantium, ducimus animi sint pariatur cumque! Beatae enim
+              commodi eum, incidunt tempora esse mollitia quo id. Ullam non autem consequatur omnis?</p>
+          </div>
+        </div>
+      </ul>
+      <ul>
+          <div class="card bg-light mb-3 container">
+            <div class="card-header">
+              <h5>Lorem ipsum dolor sit</h5>
+              <h5>amet consectetur adipisicing elit.
+                Eius praesentium aliquam nostrum</h5>
+            </div>
+            <div class="card-body">
+              <img class="img-card container" src="assets/img-carousel/caca.png" alt="Card image">
+              <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing
+                elit. Quae accusantium, ducimus animi sint pariatur cumque! Beatae enim
+                commodi eum, incidunt tempora esse mollitia quo id. Ullam non autem consequatur omnis?</p>
+            </div>
+          </div>
+        </ul>
+  </div>
+
+  <!-- testimonios -->
+  <div class="testimony col col-md-3">
+    <h2>testimonios</h2>
+    <div>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate ab unde non reiciendis odio, obcaecati beatae perspiciatis. Obcaecati, dolor. Dolore delectus optio illum. Ab cupiditate eius labore minus, dolores quasi!
+    </div>
+    <br>
+    <div>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate ab unde non reiciendis odio, obcaecati beatae perspiciatis. Obcaecati, dolor. Dolore delectus optio illum. Ab cupiditate eius labore minus, dolores quasi!
+    </div>
+    <br>
+    <div>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate ab unde non reiciendis odio, obcaecati beatae perspiciatis. Obcaecati, dolor. Dolore delectus optio illum. Ab cupiditate eius labore minus, dolores quasi!
+    </div>
+  </div>
+
+</section>
+
+<!-- organizaciones -->
+<section class="row container_org">
+<div class="col col-md-12">  
+  <h2>organizaciones:</h2>
+</div>
+
+  <div *ngFor="let images of imgOrg" class="img_org col col-md-2">
+    <img src="{{images.image}}" alt="{{images.id}}">
+    <p>{{images.id}}</p>
+  </div>
+</section>
