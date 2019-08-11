@@ -2,12 +2,10 @@
 
 <section>
     <main >
-            <div *ngIf="postusers?.length > 0; else noCommentary" >
+            <div *ngIf="postusers?.length > 0" >
                     <ul *ngFor="let postuser of postusers" > 
-                        <div >
-                     <!--     <h5>{{postuser.date}}</h5> 
-                       <h5>{{postuser.post}}</h5>  -->
-                      
+                        <div class="contenedor-card">
+                        
                        <div class="card bg-light mb-3 container" >
                         <div class="card-header"></div>
                         <div class="card-body">
@@ -17,15 +15,13 @@
                         </div>
                       </div>
                        <div>
-                              <!--  <button class="btn-menu" (click)="deleteOrder(order)">Borrar</button> -->
+                              
                    </div>
                         </div>
             
    </ul>
 </div> 
-<ng-template #noCommentary>
-       <h5>Cargando los post</h5>
-     </ng-template>    
+  
     </main>
                                        
 </section>

@@ -33,6 +33,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ImagesComponent } from './components/administrator/images/images.component';
 import { ImageListComponent } from './components/administrator/images/image-list/image-list.component';
 import { ImageComponent } from './components/administrator/images/image/image.component';
+import { HomeComponent } from './components/home/home.component';
 
 
 
@@ -53,7 +54,8 @@ import { ImageComponent } from './components/administrator/images/image/image.co
     RegisterComponent,
     ImagesComponent,
     ImageListComponent,
-    ImageComponent
+    ImageComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

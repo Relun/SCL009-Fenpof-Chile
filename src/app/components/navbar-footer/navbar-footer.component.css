@@ -25,7 +25,7 @@
 /*     a) ----> o k      initial        */
 header {
   width: 95%;
-  margin: auto;
+  margin: 1.5em auto;
 }
 
 /* c ) */
@@ -80,6 +80,7 @@ header div .first-img {
     position: relative;
    /* bottom:6em;*/
   }
+
   .menu_bar {
     display: none;
   }
@@ -159,8 +160,6 @@ header div .first-img {
     display: block ;
   }
 
-  
-
   .title-men {
     color:#fff;
     font-weight: bold;
@@ -170,12 +169,12 @@ header div .first-img {
     margin-left: 65%;
   }
 
-
   div .ico-men .icon-img{
     margin-left: 1em;
     margin-bottom: 0.2em;
     margin-top: 0.2em;
   }
+
   header {
     display: block;
     margin: 0 auto;
@@ -190,9 +189,6 @@ header div .first-img {
   header .main_title {
     display: none;
   }
-
-
-
 
 }
 
@@ -213,21 +209,24 @@ nav {
  nav div ul {
   overflow: hidden;
   list-style: none;
-
 }
 
  nav div ul li {
   float: left;
+}
 
+.nav__links .home_icon{
+  padding: 1em 2.5em 1em 1em;
+  margin-left: 0%;
+  width: 0%;
 }
 
 nav div ul li a {
   margin-left: 1em;
   color: #212F3D;
-  padding: 10px;
+  padding: 1em;
   display: block;
   text-decoration: none;
- 
 }
 
  nav div ul li a:hover {
@@ -255,7 +254,7 @@ nav div ul li a {
   .nav__links li{
   display: inline-block;
     }
-  
+
     .nav__links a {
       text-decoration: none;
       color: #000;
@@ -267,8 +266,7 @@ nav div ul li a {
       
     }
   
-  
-    .nav__links a:hover {
+    .nav__links a:hover, .nav__links .home_icon:hover {
       background:#5F8FE0;
       color: #000;
       border-radius: 6%;
@@ -302,4 +300,16 @@ nav div ul li a {
     .children:hover{
       display: block;
       position: absolute;
+    }
+
+    @media (max-width: 768px){
+
+      .nav__links .home_icon{
+        display: block;
+        width: 200px;
+      }
+
+      /* .nav__links{
+        padding: 3em auto;
+      } */
     }
