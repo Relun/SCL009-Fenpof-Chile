@@ -43,10 +43,8 @@ this.commentaryCollection = this.afs.collection('commentary');  //Inicia la cole
           return data;    
       });
       })
-      ));
-      console.log(this.commentary);
-        return this.commentary; 
-    
+      ))
+        return this.commentary;     
     }
 
 
@@ -55,16 +53,14 @@ this.commentaryCollection = this.afs.collection('commentary');  //Inicia la cole
    la entregamos con esa estructura de objeto */
   
 addPost(postuser : Postuser) {   
-    console.log("llegoooooooooooo al service de addpost");
-    console.log(postuser.id);  console.log(postuser.post);
-    
     this.commentaryCollection.add(
                             {   id : postuser.id,
                                 idFireStore : '',
-                                post : postuser.post                          
+                                post : postuser.post,
+                                fecha : Date.now()                        
                               }
                                 
-                              ).then( _ => alert("Post creado") ); // add es una promesa de firebase
+                              ).then( _ => alert("Evento publicado") ); // add es una promesa de firebase
     }
 
 
@@ -73,8 +69,7 @@ addPost(postuser : Postuser) {
   deletePost(postuser: Postuser) {
     this.commentaryDoc = this.afs.doc(`commentary/${postuser.idFireStore}`);
     this.commentaryDoc.delete();
-      // .then( _ => alert('te quedaste sin comida'))
-      // .catch(_ => alert('no pude eliminar'));
+  
   }
 
 

@@ -42,10 +42,13 @@
                 <textarea  formControlName="description_event" #createPost id="description" cols ="50" rows="15"
                   class="text-adm" placeholder="Escriba aqui su noticia" >
                 </textarea>
-                <input type="text" formControlName="date" placeholder="fecha del evento" >
-                <br>
-                <br>
-                <button id="coment" type="submit" class="btnPost" (click)="sendPost(createPost.value)">Comentar</button>
+               
+                <div class="btnComent">
+    
+             <!--     <button id="coment" type="button" class="btnPost" (click)="sendPost(createPost.value)">Comentar</button>-->
+                  <button id="coment2" type="button" class="btnPost" (click)="sendPost2(createPost)">Publicar</button> 
+                 
+                </div>
               </div>
             </div>
               <!--
@@ -54,13 +57,6 @@
           </form>
 
         </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<br>
-<hr><br>
 
 
 <!--   VER FOTO + POST            -->
@@ -69,9 +65,8 @@
     <h1>Eventos que has publicado: </h1>
     <section>
       <main>
-        
-        <div *ngIf="postusers?.length > 0; else noCommentary">
-          <ul *ngFor="let postuser of postusers ">
+        <div *ngIf="postusers?.length > 0">
+          <ul *ngFor="let postuser of postusers">
             <div class="container">
               <div class="card border-success mb-3 center-block">
                 <div class="card-header"></div>
@@ -81,20 +76,19 @@
                     alt="Card image">
                   <h4 class="card-title"></h4>
                   <p class="card-text">{{postuser.post}}</p>
+                  <h5 class="fecha">{{ postuser.fecha | date:"dd/MM/yyyy 'a las' h:mma"}}</h5>
+             <!--     <h5 class="fecha">{{ postuser.fecha | date:"dd/MM/yyyy 'a las' HH:mm:ss"}}</h5>-->
+                  <div>
+                    <button class="btn-menu" (click)="deleteCommentary(postuser)">Eliminar</button> 
+                 </div>
                 </div>
               </div>
-
-              <div>
-                <button class="btn-menu" (click)="deleteCommentary(postuser)">Eliminar</button>
-              </div>
+              
             </div>
 
           </ul>
         </div>
-        <ng-template #noCommentary>
-          <h5>Cargando los post</h5>
-        </ng-template>
-
+        
       </main>
 
     </section>

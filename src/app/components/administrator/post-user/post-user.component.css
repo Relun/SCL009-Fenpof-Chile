@@ -13,3 +13,9 @@
     width: 800px;
     margin: auto;
 }*/
+
+.fecha{
+    text-align: right;
+    font-style: italic;
+    font-size: 14px;
+}

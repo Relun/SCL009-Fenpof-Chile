@@ -31,6 +31,8 @@ export class PostUserComponent implements OnInit {
   /* PRINT IMAGE */
   imageList: any[];
 
+  timestamp1 = Date.now();
+
 
   constructor(public postUserService: PostUserService,
  
@@ -41,14 +43,23 @@ export class PostUserComponent implements OnInit {
     /* I */
     this.resetFormPost();
     /* this.getCurrentUser();*/
-    this.postUserService.getRead().subscribe(postuser => {
-      this.postusers = postuser;
+   
+    //this.miFecha = Date.now();
+    //console.log(this.miFecha);
+  // this.timestamp1 = new Date();
+  //  console.log(this.timestamp1);
+    
+
+    this.postUserService.getRead().subscribe(postuser =>{
+      this.postusers = postuser; 
+      let dataOrdenada = this.postusers.sort((a, b) => {
+        if (a.fecha < b.fecha) return 1;
+        if (a.fecha > b.fecha) return -1;
+        return 0;
+      });
+
+      this.postusers = dataOrdenada;
     });
-
-
-
-
-
   }
 
   //1ero --> CREATION   FORM 
@@ -145,14 +156,35 @@ export class PostUserComponent implements OnInit {
     this.postUserService.addPost(this.createPost);
   }
 
-  /*Elimina el ID de Firestore */
-  deleteCommentary(postuser: Postuser) {
-    const response = confirm('¿Quieres eliminar esta publicacion?');
-    if (response) {
-      this.postUserService.deletePost(postuser);
+
+
+/*Funcion para crear post y que se guarde en firestore */
+sendPost2(mypost): void  {
+  console.log("Llego hasta sendPost", mypost );
+ /*llamar a la funcion del servicio, para indicarle que debe enviar este post
+  a firebase*/
+  console.log(mypost);
+  this.createPost = new Postuser('0', mypost.value, 'fire'); // crear una nueva instancia en cada post
+  mypost.value = '';
+ // mypost.placeholder="sdfsdfsdfsdfdsfdsfaqui su noticia";
+  //this.createPost.post = mypost;
+
+
+  console.log(this.createPost);
+  this.postUserService.addPost(this.createPost); 
+}
+
+
+    /*Elimina el ID de Firestore */
+    deleteCommentary(postuser:Postuser) {
+      const response = confirm('¿Quieres eliminar esta publicacion?');
+      if (response ) {
+        this.postUserService.deletePost(postuser);
+      }
+      return;
     }
     return;
 
 
 }
-}
+
