@@ -1,33 +1,77 @@
-<div class="container" *ngIf="isLogged">
-    <h1>Seccion del administrador</h1>
-    <div class="container">
-      <div class="text-post">
-        <!--    <span ng-non-bindable>{{1288323623006 | date:"MM/dd/yyyy 'at' h:mma"}}</span>:
-          <span>{{'1288323623006' | date:"MM/dd/yyyy 'at' h:mma"}}</span><br>
-    
-          <input #scheduledStartDate="ngModel" [(ngModel)]="reposition.scheduledStartDate"
-    name="scheduledStartDate" id="scheduledStartDate" class="input is-normal"
-    type="date" required placeholder="Leaving...">
-    -->
-    
-        <textarea #createPost id="description" placeholder="Escriba aqui su noticia" cols="60" rows="10"
-          class="text-adm"></textarea>
-      </div>
-      <div class="btnComent">
-    
-        <button id="coment" type="button" class="btnPost" (click)="sendPost(createPost.value)">Comentar</button>
-    
-        <!--<button id="clearPost" type="button" class="btnPost" >Eliminar</button>-->
+<div class="container container-title" *ngIf="!isLogged">
+  <div class="row">
+    <p>Seccion Eventos Administrador</p>
+  </div>
+
+
+  <br>
+  <hr class="width=100%"><br>
+  <div class="row ">
+    <!--    SUBIR UNA FOTO           -->
+    <div class="col-12 form-upload ">
+      <div class="card upload" style="width:60rem">
+        <div class="card-body ">
+
+          <form [formGroup]="formTemplatePost" (submit)="onSubmitPost(formTemplatePost.value)">
+            <!--    SUBIR UN POST             -->
+            <div class="row">
+              <div class="col">
+               
+                <label>Selecciona un Archivo/Foto </label>
+                <input type="file" accept="image/*" class="form-control" #fileUploaderPost
+                  formControlName="imageUrlPost" (change)="showPreviewPost($event)" class="btn-file-up">
+                <br>
+                <hr>
+                <br>
+                <!--    <span ng-non-bindable>{{1288323623006 | date:"MM/dd/yyyy 'at' h:mma"}}</span>:  <span>{{'1288323623006' | date:"MM/dd/yyyy 'at' h:mma"}}</span><br> <input #scheduledStartDate="ngModel" [(ngModel)]="reposition.scheduledStartDate" name="scheduledStartDate" id="scheduledStartDate" class="input is-normal"  type="date" required placeholder="Leaving...">-->
+                <div class="text-center">
+                  <img [src]="imgSrcPost" width="350px" height="250px" (click)="fileUploaderPost.click()">
+                  <!-- si imagen cargando !! -->
+                </div>
+                <br>
+                <select formControlName="categoryPost" class="form-control">
+                  <option value="Eventos2019">Eventos 2019</option>
+                  <option value="Eventos2020">Eventos 2020</option>
+                  <option value="Eventos2021">Eventos 2021</option>
+                  <option value="Eventos2022">Eventos 2022</option>
+                </select>
+              </div>
+
+              <div class="col">
+                <label for=""> Describa aquí su evento:</label>
+                <textarea  formControlName="description_event" #createPost id="description" cols ="50" rows="15"
+                  class="text-adm" placeholder="Escriba aqui su noticia" >
+                </textarea>
+                <input type="text" formControlName="date" placeholder="fecha del evento" >
+                <br>
+                <br>
+                <button id="coment" type="submit" class="btnPost" (click)="sendPost(createPost.value)">Comentar</button>
+              </div>
+            </div>
+              <!--
+                 l siguiente boton con id comment tiene un evento click con funcion cuyo parametro esta  relacionado con #createPost en la textarea ... la funcion toma parametro el contenido de esta textare (ver fx) -->
+              <!--<button id="clearPost" type="button" class="btnPost" >Eliminar</button>-->
+          </form>
+
+        </div>
       </div>
     </div>
-    
-    
-    <h1>Eventos que has publicado</h1>
-    
+  </div>
+</div>
+
+<br>
+<hr><br>
+
+
+<!--   VER FOTO + POST            -->
+<div class="row">
+  <div class="col-10">
+    <h1>Eventos que has publicado: </h1>
     <section>
       <main>
+        
         <div *ngIf="postusers?.length > 0; else noCommentary">
-          <ul *ngFor="let postuser of postusers">
+          <ul *ngFor="let postuser of postusers ">
             <div class="container">
               <div class="card border-success mb-3 center-block">
                 <div class="card-header"></div>
@@ -39,19 +83,20 @@
                   <p class="card-text">{{postuser.post}}</p>
                 </div>
               </div>
-    
+
               <div>
-                <!--  <button class="btn-menu" (click)="deleteOrder(order)">Borrar</button> -->
+                <button class="btn-menu" (click)="deleteCommentary(postuser)">Eliminar</button>
               </div>
             </div>
-    
+
           </ul>
         </div>
         <ng-template #noCommentary>
           <h5>Cargando los post</h5>
         </ng-template>
+
       </main>
-    
+
     </section>
-    
+  </div>
 </div>
