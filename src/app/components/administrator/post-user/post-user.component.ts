@@ -143,7 +143,7 @@ export class PostUserComponent implements OnInit {
     //this.createPost.post = mypost;
     console.log("CREATEPOST  : " + JSON.stringify(this.createPost));
     this.postUserService.addPost(this.createPost);
-  }i
+  }
 
   /*Elimina el ID de Firestore */
   deleteCommentary(postuser: Postuser) {
@@ -152,6 +152,7 @@ export class PostUserComponent implements OnInit {
       this.postUserService.deletePost(postuser);
     }
     return;
-  }
 
+
+}
 }

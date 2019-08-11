@@ -5,5 +5,5 @@ export class Data {
     representative: string;
     contact: number;
     email: string;
-
+    image: any;
 }

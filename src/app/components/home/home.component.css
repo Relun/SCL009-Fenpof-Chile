@@ -1,0 +1,35 @@
+/* Formato general del home */
+.event_testimony{
+    margin: 4em 1em 6em 1em;
+}
+
+h2{
+    margin-bottom: 1.5em;
+}
+
+/* Formato de eventos */
+
+.show_events{
+    padding: 0em 5em 0em 3em;
+}
+
+/* Formato de testimonios */
+
+.testimony{
+    margin-right: 4em;
+}
+
+/* Formato imagenes de organizaciones que se mostrarán */
+
+.container_org{
+    margin: 4em 2em;
+    border-top: .15em solid #A2C7E2;
+    padding: 3em 2em 3em 2em;
+}
+
+.img_org img{
+    border-radius: 100%;
+    width: 7em;
+    height: 7em;
+    margin: 1em;
+}
