@@ -1,15 +1,32 @@
-<div class="container-fluid aaa">
-<div *ngFor="let Data of posts" >
-  <h3>{{Data.id}}</h3>
-  <!-- <p>Contacto</p> -->
-  <ul>
-    <!-- <li>{{Data.representative}}</li> -->
-    <h5>{{Data.representative}}</h5>
-    <li>+{{Data.contact}}</li>
-    <li>{{Data.email}}</li>
-    <br>
-  </ul>
-</div>
+
+<!-- <div>FOTO {{Data.img}}</div> -->
+
+<div  *ngFor="let Data of posts" class="card mb-3" style="max-width: 1000px; margin-left: 80px; margin-right: 80px; margin-top: 40px;" >
+  <div class="row no-gutters">
+    <!-- <div class="col-md-4">
+      <img src="{{Data.image}}" class="card-img" alt="{{Data.id}}">
+    </div> -->
+    <div class="col-md-8">  
+      <div class="card-body">
+        <h3 class="card-title">{{Data.id}}</h3>
+        <p class="card-text">{{Data.info}}</p> 
+        <!-- <a href="http://{{Data.website}}">Ir a {{Data.id}}</a> -->
+        <!-- <a href="http://{{Data.website}}" class="card-link">Ir a {{Data.id}}</a> -->
+
+        <!-- <ul class="list-group list-group-flush">
+            <li class="list-group-item">Representante: {{Data.representative}}</li>
+            <li class="list-group-item">+{{Data.contact}}</li>
+            <li class="list-group-item">{{Data.email}}</li>
+          </ul> -->
+          <!-- <a href="http://{{Data.website}}" class="btn btn-primary">Ir a {{Data.id}}</a> -->
+        <p class="card-text"><b>Representante:</b> {{Data.representative}}  </p>
+        <p class="card-text">+{{Data.contact}}</p>
+        <p class="card-text">{{Data.email}}</p> 
+        
+       <a href="http://{{Data.website}}" class="btn">Ir a {{Data.id}}</a>
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- <div class="container-fluid">

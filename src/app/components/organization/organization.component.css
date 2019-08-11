@@ -10,10 +10,21 @@
 }
 
 h3{
-    color:blue;
+    color: #A2C7E2;
 }
 
-p{
+/* p{
     color: black; 
     font-weight: bold;
+} */
+.img_org img{
+    border-radius: 100%;
+    width: 7em;
+    height: 7em;
+    margin: 1em;
+}
+.btn{
+    background-color: #A2C7E2;
+    color: whitesmoke;
+
 }
