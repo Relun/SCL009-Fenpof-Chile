@@ -1,67 +1,74 @@
 <section class="event_testimony row justify-content-between">
-  
+
   <!-- Eventos -->
-  <div class="show_events col col-md-7">
-    <h2>Eventos</h2>
-    <ul>
-      <div class="card bg-light mb-3 container">
-        <div class="card-header">
-          <h5>Lorem ipsum dolor sit</h5>
-          <h5>amet consectetur adipisicing elit.
-            Eius praesentium aliquam nostrum</h5>
-        </div>
-        <div class="card-body">
-          <img class="img-card container" src="assets/img-carousel/caca.png" alt="Card image">
-          <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing
-            elit. Quae accusantium, ducimus animi sint pariatur cumque! Beatae enim
-            commodi eum, incidunt tempora esse mollitia quo id. Ullam non autem consequatur omnis?</p>
+
+  <div class="events_container col col-sm-12 col-md-7">
+    <ul *ngFor="let postuser of published_event | paginate: page_size:page_number">
+      <div class="contenedor-card">
+        <div class="card bg-light mb-3 container">
+          <div class="card-header"></div>
+          <div class="card-body">
+            <img class="img-card container"
+              src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22318%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_158bd1d28ef%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_158bd1d28ef%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22129.359375%22%20y%3D%2297.35%22%3EImage%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+              alt="Card image">
+            <h4 class="card-title"></h4>
+            <p class="card-text">{{postuser.post}}</p>
+          </div>
         </div>
       </div>
     </ul>
-    <ul>
-        <div class="card bg-light mb-3 container">
-          <div class="card-header">
-            <h5>Lorem ipsum dolor sit</h5>
-            <h5>amet consectetur adipisicing elit.
-              Eius praesentium aliquam nostrum</h5>
-          </div>
-          <div class="card-body">
-            <img class="img-card container" src="assets/img-carousel/caca.png" alt="Card image">
-            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing
-              elit. Quae accusantium, ducimus animi sint pariatur cumque! Beatae enim
-              commodi eum, incidunt tempora esse mollitia quo id. Ullam non autem consequatur omnis?</p>
-          </div>
-        </div>
-      </ul>
-<a class="see_more" routerLink="/events">Ver más</a>
+    <a class="see_more" routerLink="/events">Ver más</a>
   </div>
 
+
   <!-- testimonios -->
-  <div class="testimony col col-md-3">
-    <h2>testimonios</h2>
-    <div>
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate ab unde non reiciendis odio, obcaecati beatae perspiciatis. Obcaecati, dolor. Dolore delectus optio illum. Ab cupiditate eius labore minus, dolores quasi!
-    </div>
-    <br>
-    <div>
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate ab unde non reiciendis odio, obcaecati beatae perspiciatis. Obcaecati, dolor. Dolore delectus optio illum. Ab cupiditate eius labore minus, dolores quasi!
-    </div>
-    <br>
-    <div>
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate ab unde non reiciendis odio, obcaecati beatae perspiciatis. Obcaecati, dolor. Dolore delectus optio illum. Ab cupiditate eius labore minus, dolores quasi!
-    </div>
+
+  <div class="testmony col col-sm-12 col-md-3">
+        <h2>testimonios</h2>
+        <div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate ab unde non reiciendis odio, obcaecati
+            beatae perspiciatis. Obcaecati, dolor. Dolore delectus optio illum. Ab cupiditate eius labore minus, dolores
+            quasi!
+          </p>
+        </div>
+        <br>
+        <div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate ab unde non reiciendis odio, obcaecati
+            beatae perspiciatis. Obcaecati, dolor. Dolore delectus optio illum. Ab cupiditate eius labore minus, dolores
+            quasi!
+          </p>
+        </div>
+        <br>
+        <div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate ab unde non reiciendis odio, obcaecati
+            beatae perspiciatis. Obcaecati, dolor. Dolore delectus optio illum. Ab cupiditate eius labore minus, dolores
+            quasi!
+          </p>
+        </div>
   </div>
 
 </section>
 
+<!-- <div class="row">
+     "¿Qué es Fempof resumen"
+    <div class="fempof_summary col col-sm-12 col-md-3">
+        <p>La federación agrupa a las distintas organizaciones de enfermedades poco frecuentes con la finalidad de trabajar de manera conjunta es visibilizar, concientizar y educar.
+          También buscan incidir en políticas públicas, que ayuden a mejorar la calidad de vida de cada una de las personas que viven con algún tipo de enfermedad poco frecuente, creando redes de apoyo tanto en chile como en el extranjero. 
+          </p>
+      </div>    
+</div> -->
+
 <!-- organizaciones -->
 <section class="row container_org">
-<div class="col col-md-12">  
-  <h2>organizaciones:</h2>
-</div>
+  <div class="col col-sm-12 col-md-12">
+    <h2>organizaciones:</h2>
+  </div>
 
-  <div *ngFor="let images of imgOrg" class="img_org col col-md-2">
+  <div *ngFor="let images of imgOrg" class="img_org col col-sm-12 col-md-2">
     <img src="{{images.image}}" alt="{{images.id}}">
-    <p>{{images.id}}</p>
+    <p class="name_org"><strong>{{images.id}}</strong></p>
   </div>
 </section>

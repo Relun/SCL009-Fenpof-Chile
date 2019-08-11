@@ -38,7 +38,7 @@ website: '',
 representative:'Victor Rodriguez',
 contact: +56981873224, 
 email:'Menkeschile@gmail.com',
-image: ''
+image: './assets/img/menkes-chile.png'
  },
 
 { id: 'Corporación Chiari Chile',
@@ -78,7 +78,7 @@ website:'https://www.picimon.com/fundacion.otras.miradas/',
 representative:'Paulina Saez',
 contact: +56996781226, 
 email:'fotrasmiradas@gmail.com',
-image: '' 
+image: './assets/img/otras-miradas.png' 
 },
 
 { id: 'Asociación Nada Frecuente Chile',
