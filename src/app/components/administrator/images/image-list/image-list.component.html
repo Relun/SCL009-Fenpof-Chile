@@ -1,38 +1,47 @@
 <app-images></app-images>
 <hr class="line-h">
-<div class="container-fluid">
-    <table *ngIf="imageList">
-        <tr *ngFor="let i of rowIndexArray">
-          <td class="aaaa">
-            <div class="imagebox" *ngIf="i==0 && isLogged">
-              <a routerLink="/image/upload">
-                <img *ngIf="isLogged" src="./../../../../../assets/imgregistrelogin/image_placeholder.jpg" class="img-fluid" height="350px">
-               
-                <span class="imagebox-desc">Inserta una nueva Imagen</span></a>
-            </div>
-            <div class="imagebox" *ngIf="i==0 && !isLogged ">
-                <a routerLink="/image/upload">
-                
-                  <img  src="./../../../../../assets/imgregistrelogin/l.jpg" class="img-fluid">
-                  <span class="imagebox-desc">APEC 2019</span></a>
-              </div>
-            <div class="imagebox" *ngIf="i!=0">
-              <img [src]="imageList[3*i-1].imageUrl" class="img-fluid especific-img">
-              <span class="imagebox-desc">{{imageList[3*i-1].caption}}</span>
-            </div>
-          </td>
-          <td *ngIf="imageList[3*i]">
-            <div class="imagebox">
-              <img [src]="imageList[3*i].imageUrl" class="img-fluid" width="350px" height="300px">
-              <span class="imagebox-desc">{{imageList[3*i].caption}}</span>
-            </div>
-          </td>
-          <td *ngIf="imageList[3*i+1]">
-            <div class="imagebox">
-              <img [src]="imageList[3*i+1].imageUrl" class="img-fluid">
-              <span class="imagebox-desc">{{imageList[3*i+1].caption}}</span>
-            </div>
-          </td>
-        </tr>
-      </table>
+
+
+
+<div class="container-fluid list-block-img-one">
+  <table *ngIf="imageList">
+
+    <tr *ngFor="let i of rowIndexArray">
+      <td class="t-table">
+
+        <div class="imagebox" *ngIf="i==0 && isLogged">
+          <a routerLink="/image/upload">
+            <img *ngIf="isLogged" src="./../../../../../assets/imgregistrelogin/image_placeholder.jpg"
+              class="img-fluid"  >
+            <span class="imagebox-desc">Inserta una nueva Imagen</span></a>
+        </div>
+
+
+
+
+        <div class="imagebox" *ngIf="i==0 && !isLogged ">
+          <a routerLink="/image/upload">
+
+            <img src="./../../../../../assets/imgregistrelogin/l.jpg" class="img-fluid">
+            <span class="imagebox-desc">APEC 2019</span></a>
+        </div>
+        <div class="imagebox" *ngIf="i!=0">
+          <img [src]="imageList[3*i-1].imageUrl" class="img-fluid especific-img">
+          <span class="imagebox-desc">{{imageList[3*i-1].caption}}</span>
+        </div>
+      </td>
+      <td class="t-table" *ngIf="imageList[3*i]">
+        <div class="imagebox">
+          <img [src]="imageList[3*i].imageUrl" class="img-fluid" width="350px" height="300px">
+          <span class="imagebox-desc">{{imageList[3*i].caption}}</span>
+        </div>
+      </td>
+      <td class="t-table" *ngIf="imageList[3*i+1]">
+        <div class="imagebox">
+          <img [src]="imageList[3*i+1].imageUrl" class="img-fluid">
+          <span class="imagebox-desc">{{imageList[3*i+1].caption}}</span>
+        </div>
+      </td>
+    </tr>
+  </table>
 </div>

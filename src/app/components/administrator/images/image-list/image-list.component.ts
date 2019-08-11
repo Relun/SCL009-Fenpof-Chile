@@ -5,11 +5,6 @@ import { Router } from '@angular/router';
 import { AngularFireAuth } from '@angular/fire/auth';
 
 
-
-
-
-
-
 @Component({
   selector: 'app-image-list',
   templateUrl: './image-list.component.html',
@@ -21,7 +16,8 @@ export class ImageListComponent implements OnInit {
   rowIndexArray: any[];
 
   public isLogged: boolean = false;
-  
+
+
   constructor(private service: ImageService, private authService: AuthService, private router: Router, private afsAuth: AngularFireAuth) { }
 
 
@@ -33,9 +29,14 @@ export class ImageListComponent implements OnInit {
     this.service.getImageDetailList();
     this.service.imageDetailList.snapshotChanges().subscribe(
       list => {
-       
-        this.imageList = list.map(item => { return item.payload.val(); });
-        this.rowIndexArray =  Array.from(Array(Math.ceil((this.imageList.length+1) / 3)).keys());
+
+        console.log(list);
+
+        this.imageList = list.map(item => { console.log(item); return item.payload.val(); });
+
+        console.log(this.imageList);
+
+        this.rowIndexArray =  Array.from(Array(Math.ceil((this.imageList.length + 1) / 3)).keys());
       }
     );
   }

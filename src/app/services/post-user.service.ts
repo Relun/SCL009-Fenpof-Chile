@@ -1,21 +1,28 @@
-import { Injectable } from '@angular/core';
+import { Injectable  } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { Postuser } from 'src/app/post-user';
-import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from '@angular/fire/firestore';
+import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument, AngularFirestoreCollectionGroup } from '@angular/fire/firestore';
 import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PostUserService {
- 
+
+/*  Declaracion  de  varibles  para  coleccion    "textarea"    */
 commentaryCollection: AngularFirestoreCollection<Postuser>;
+probandoimagenes: Observable<Postuser[]>;
 commentary: Observable<Postuser[]>;
 commentaryDoc: AngularFirestoreDocument<Postuser>;
+
+/*  Declaracion  de  varibles  para  coleccion    " image-post "    */
+/* uso en html */
+/*imgSrcPost:string;
+selectImagePost:any=null;*/
+/* isSubmitted:boolean
+   isLogged:boolean = false */
  
- 
- 
-  constructor(public afs:AngularFirestore) { 
+constructor(public afs:AngularFirestore) {   
 // Lectura de la coleccion "commentary" en Firestore
 this.commentaryCollection = this.afs.collection('commentary');  //Inicia la coleccion
 }
@@ -27,7 +34,9 @@ this.commentaryCollection = this.afs.collection('commentary');  //Inicia la cole
  getRead() {
      // this.commentaryCollection = this.afs.collection('commentary');   
       this.commentary = this.commentaryCollection.snapshotChanges().pipe(map((changes => {
+     
         return changes.map(a => {
+          console.log("a " + a)
           const data = a.payload.doc.data() as Postuser;
              data.idFireStore = a.payload.doc.id;
               console.log(data);
