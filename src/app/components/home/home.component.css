@@ -32,4 +32,49 @@ h2{
     width: 7em;
     height: 7em;
     margin: 1em;
+    /* position: relative;
+  display: inline-block; */
+}
+
+.img_org p{
+    text-align: center;
+    font-style: oblique;
+}
+
+@media (max-width: 768px){
+    
+    .img_org p{
+        overflow:hidden;
+    }
+
+    /* Texto que aparece al poner el curso sobre la imagen */
+.img_org .name_org {
+    visibility: hidden;
+    width: 120px;
+    background-color: rgba(0, 0, 0, 0.753);
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+       position: absolute;
+    z-index: 1;
+  }
+  
+  .img_org:hover .name_org {
+    visibility: visible;
+  }
+
+  .fempof_summary{
+      display: none;
+  }
+
+  .events_container{
+      padding-bottom: 3em;
+  }
+
+  .testimony{
+      padding-top: 3em;
+      border-top: .15em solid #A2C7E2;
+  }
+    
 }
