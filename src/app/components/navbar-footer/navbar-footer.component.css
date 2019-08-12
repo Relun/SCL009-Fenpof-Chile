@@ -37,11 +37,12 @@ header div .first-img {
 .logo {
   display: block;
   width: 11em;
-
   border-radius: 2%;
   margin: auto;
-  /*clear: both;
+  /*clear: both; 
+ 
   */
+
   /*
   margin: 12% 0% 10% 50%;*/
 }

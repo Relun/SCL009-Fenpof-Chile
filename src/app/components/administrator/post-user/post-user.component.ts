@@ -183,7 +183,7 @@ sendPost2(mypost): void  {
       }
       return;
     }
-    return;
+    //return;
 
 
 }
