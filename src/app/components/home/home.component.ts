@@ -12,6 +12,7 @@ import { Postuser } from 'src/app/post-user';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
+
 export class HomeComponent implements OnInit {
   // Variables organizaciones
   DATA: Data[] = DATA;

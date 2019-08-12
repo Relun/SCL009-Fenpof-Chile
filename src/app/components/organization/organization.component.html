@@ -1,92 +1,19 @@
-
-<!-- <div>FOTO {{Data.img}}</div> -->
-
-<div  *ngFor="let Data of posts" class="card mb-3" style="max-width: 1000px; margin-left: 80px; margin-right: 80px; margin-top: 40px;" >
+<div class="container">
+<div  *ngFor="let Data of posts" class="card mb-3" >
   <div class="row no-gutters">
-    <!-- <div class="col-md-4">
-      <img src="{{Data.image}}" class="card-img" alt="{{Data.id}}">
-    </div> -->
+    <div class="col-md-4">
+      <img src="{{Data.image}}" class="card-img img-fluid" alt="{{Data.id}}">
+    </div>
     <div class="col-md-8">  
       <div class="card-body">
         <h3 class="card-title">{{Data.id}}</h3>
         <p class="card-text">{{Data.info}}</p> 
-        <!-- <a href="http://{{Data.website}}">Ir a {{Data.id}}</a> -->
-        <!-- <a href="http://{{Data.website}}" class="card-link">Ir a {{Data.id}}</a> -->
-
-        <!-- <ul class="list-group list-group-flush">
-            <li class="list-group-item">Representante: {{Data.representative}}</li>
-            <li class="list-group-item">+{{Data.contact}}</li>
-            <li class="list-group-item">{{Data.email}}</li>
-          </ul> -->
-          <!-- <a href="http://{{Data.website}}" class="btn btn-primary">Ir a {{Data.id}}</a> -->
         <p class="card-text"><b>Representante:</b> {{Data.representative}}  </p>
         <p class="card-text">+{{Data.contact}}</p>
-        <p class="card-text">{{Data.email}}</p> 
-        
+        <p class="card-text">{{Data.email}}</p>  
        <a href="http://{{Data.website}}" class="btn">Ir a {{Data.id}}</a>
       </div>
     </div>
   </div>
 </div>
-
-<!-- <div class="container-fluid">
-<div class="row">
-  <div>
-  <img src="assets/img/otras-miradas.png" class="imgpeque" alt="otras-miradas-Chile">
 </div>
-<div class="info col col-md-6 col-sm-12">
- <a href="https://www.picimon.com/fundacion.otras.miradas/">Fundación Otras Miradas</a>
- <br> 
- <p>Representante: Paulina Saez</p>
-  <p>Contacto: <br>
-    +56996781226 <br>
-    fotrasmiradas@gmail.com
-  </p>
-</div>
-</div>
-</div>
-<div class="container-fluid">
-<div class="row">
-      <img src="assets/img/menkes-chile.png" class="imgpeque" alt="Menkes-Chile">
-    
-    <div class="info col col-md-6 col-sm-12">
-  
-     <a href="https://www.facebook.com/MenkesChile/">Agrupación Menkes Chile</a>
-     <br> 
-     <p>Representante: Víctor Rodríguez</p>
-      <p>Contacto: <br>
-        +56981873224 <br>
-        menkeschile@gmail.com
-      </p>
-
-    </div>
-  </div>
-</div>
-  <div class="container-fluid">
-  <div class="row">
-      <img src="assets/img/dimus.jpg" class="imgpeque" alt="Dimus-chile">
-    <div class="info col col-md-6 col-sm-12">
-     <a href="https://dimuschile.cl/">Dimus-Asociación distrofia muscular Chile</a>
-     <br> 
-     <p>Representante: Igor Navarrete Richards</p>
-      <p>Contacto: <br>
-        +56 9 5720 2342 <br>
-        i.navarrete.r@gmail.com <br>
-        </p>
-    </div>
-  </div>
-</div>
-<div class="container-fluid">
-  <div class="row">
-      <img src="assets/img/fame.png" class="imgpeque" alt="fame-Chile">
-    <div class="info col col-md-6 col-sm-12">
-      <a href="http://famechile.cl/">FAME Chile - Familias Atrofia Muscular Espinal Chile</a>
-     <br> 
-     <p>Representante: Paulina Gonzalez</p>
-      <p>Contacto: <br>
-        +56972789425 <br>
-        presidente@famechile.cl <br>
-        </p>
-    </div>
-  </div>  
-</div> -->

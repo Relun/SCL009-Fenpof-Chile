@@ -1,30 +1,54 @@
-.imgpeque{
-    width: 150px; height: 100px;
-
+.card {
+    max-width: 63em; 
+    margin-left: 5em;
+    margin-right: 5em;
+    margin-top: 2em;
 }
-.aaa{
-    background: white;
-}
-.container-fluid{
-    margin:3rem;
-}
-
 h3{
     color: #A2C7E2;
 }
 
-/* p{
-    color: black; 
-    font-weight: bold;
-} */
-.img_org img{
+.card-img{
     border-radius: 100%;
-    width: 7em;
-    height: 7em;
+    width: 13em;
+    height: 13em;
     margin: 1em;
 }
+
 .btn{
     background-color: #A2C7E2;
     color: whitesmoke;
 
 }
+
+@media (max-width:320px){
+
+    .card {
+        max-width: 63em; 
+        margin-left: 1em;
+        margin-right: 1em;
+        margin-top: 1em;
+    }
+    /* .card-img{
+        border-radius: 100%;
+        width: 12em;
+        height: 12em;
+        margin: 1em;
+    } */
+  }
+
+  @media (min-width:375px){
+   
+    .card {
+        max-width: 63em; 
+        margin-left: 1em;
+        margin-right: 1em;
+        margin-top: 1em;
+    }
+    .card-img{
+        border-radius: 100%;
+        width: 13em;
+        height: 13em;
+        /* margin: 1em; */
+    }
+  }

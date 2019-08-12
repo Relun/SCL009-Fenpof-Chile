@@ -10,8 +10,8 @@ import { DATA } from '../../links/minidata';
   selector: 'app-organization',
   templateUrl: './organization.component.html',
   styleUrls: ['./organization.component.css'],
-  // <img src="assets/" width="200px" />
 })
+
 export class OrganizationComponent implements OnInit {
  DATA: Data[] = DATA;
  posts = [];

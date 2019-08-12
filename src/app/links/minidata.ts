@@ -7,7 +7,7 @@ export const DATA: Data[] = [
   representative:'Víctor Rodríguez',
   contact: 56981873224, 
   email:'menkeschile@gmail.com',
-  image:'./assets/img/menkes-chile.png',
+  image:'./assets/img/menkeschile.jpg',
   info: 'Agrupación Menkes Chile se enfoca en agrupar a familias para entregarles acompañamiento en el proceso'
 },  
     
@@ -34,7 +34,7 @@ info: 'Nuestra misión es poder informar sobre los diferentes trastornos y displ
  representative:'Jose Manuel Pozuelo',
  contact: 56973949029, 
  email:'josempozuelo@gmail.com',
- image:'./assets/img/nadafrecuente.png',
+ image:'./assets/img/nada-frec.jpg',
  info:'Asociación de Familiares y afectados por enfermedades poco frecuentes. Concepción'  
  }, 
 
@@ -49,11 +49,11 @@ info: 'Nuestra misión es poder informar sobre los diferentes trastornos y displ
  }, 
 
  { id: 'Corporación Chiari Chile',
-website:'twitter.com/chiarichile',
+website:'www.facebook.com/groups/22609054444/',
 representative:'Ana Leikin',
 contact: 56942388910, 
 email:'ana.leikin@gmail.com',
-image:'./assets/img/chiari.jpg',
+image:'./assets/img/coprchiari.png',
 info: 'Este grupo es la instancia para compartir información y apoyarnos en los momentos difíciles. Si conoces alguien con Chiari o has sido diagnosticado eres muy bienvenido a contarnos tus experiencias'
 },
 
@@ -62,7 +62,7 @@ website:'dimuschile.cl',
 representative:'Igor Navarrete',
 contact: 56957202342, 
 email:'i.navarrete.r@gmail.com',
-image:'./assets/img/dimus.jpg',
+image:'./assets/img/Dimus-Chile.jpg',
 info: 'Dimus Chile es una asociación civil sin fines de lucro orientada al área social y médica de pacientes con Distrofia Muscular, que nace producto de las infinitas necesidades que tiene una persona con una enfermedad Neuromuscular y el escaso apoyo que existe por parte de los organismos públicos y privados hacia este tipo de pacientes'
 },
 
@@ -71,7 +71,7 @@ website:'famechile.cl',
 representative:'Paulina Gonzalez',
 contact: 56972789425, 
 email:'presidente@famechile.cl',
-image:'./assets/img/fame.png',
+image:'./assets/img/famechile.png',
 info: 'Fame Chile agrupa a las familias con niños y adultos afectados de esta enfermedad, con el propósito de acoger, contener, orientar y organizar el acceso de las familias a la información, estudios clínicos, desarrollo de nuevas terapias y a su inserción en la sociedad chilena'
 },
 
@@ -80,7 +80,7 @@ website:'www.facebook.com/Fundaci%C3%B3n-ADN-Chile-2030411287201462',
 representative:'Marcela Gonzalez',
 contact: 56975434456, 
 email:'presidenta.adnchile@gmail.com',
-image:'./assets/img/adnfundacion.png',
+image:'./assets/img/adnchile.png',
 info: 'Fundación ADN Chile distrofias musculares, se conforma por la fundadora y Presidenta Marcela González, Secretario Hugo Correa y la Tesorera Claudia Palma'
 },
 
@@ -99,17 +99,17 @@ website:'www.picimon.com/fundacion.otras.miradas',
 representative:'Paulina Saez',
 contact: 56996781226, 
 email:'fotrasmiradas@gmail.com',
-image:'./assets/img/otras-miradas.png',
+image:'./assets/img/otrasmiradas.png',
 info:'Somos familias dedicadas a nuestros hijos con NEE, dispuestos a aprender, sensibilizar, concientizar, crear, y avanzar juntos por el camino de la vida'
 },
 
 { id: 'Terapeuta Ocupacional', 
-website:'',
+website:'es-la.facebook.com/FenpofChile/',
 representative:'Sebastian Gallegos',
 contact: 56992710137, 
 email:'to.sgallegosb@gmail.com',
-image:'',
-info: ''
+image:'./assets/img/terapeuta.png',
+info: 'Asesor en Terapia Ocupacional '
 },
 
 ]
