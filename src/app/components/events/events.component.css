@@ -1,11 +1,14 @@
 
 
 .card bg-light mb-3{
-    width: 300px; height: 300px; margin: 20px 500px;
+    width: 200px; height: 200px; margin: 20px 300px;
 }
 .img-card {
     height: 200px; width: 50%; display: block;
 }
 .contenedor-card{
     margin: auto;
+}
+.title-events{
+    text-align: center;
 }

@@ -39,7 +39,7 @@ this.commentaryCollection = this.afs.collection('commentary');  //Inicia la cole
           console.log("a " + a)
           const data = a.payload.doc.data() as Postuser;
              data.idFireStore = a.payload.doc.id;
-             data.photo = 'https://firebasestorage.googleapis.com/v0/b/fenfop-chile-c0ea2.appspot.com/o/eventos%2F_1565588335794?alt=media&token=729a5dc9-c8e1-4cb6-970c-9de9e12279ec'; // aqui va lo de la paty
+             data.photo = 'https://firebasestorage.googleapis.com/v0/b/fenfop-chile-c0ea2.appspot.com/o/2019%2F_1565625858167?alt=media&token=4eb62f55-ddd9-486f-9b40-b7f72d741b63'; // aqui va lo de la paty
               console.log(data);
           return data;    
       });

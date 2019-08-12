@@ -1,15 +1,16 @@
 
 <div style="align-self: center; width: 100%" > 
  <div *ngIf="postusers?.length > 0" >
-    <div *ngFor="let postuser of postusers" >   
+    <div *ngFor="let postuser of postusers" >  
+            <h2 class="title-events">Algunos de nuestros eventos</h2>   
           <div class="card" style="margin: 5%">
-          
+       
             <div class="card-body" style="max-width: content;"  >
                 <h5 class="card-title">{{postuser.myPostTitle}}</h5>
                 <h6 class="card-subtitle mb-2 text-muted"
                  style= " font-size: 10px; font-style: italic "
                 >Ingresado {{ postuser.fecha | date:"dd/MM/yyyy 'a las' h:mma"}}</h6>
-                <img class="card-img-top" src="{{postuser.photo}}" width="25rem" height="300px"  alt="Card image cap">
+                <img class="card-img-top" src="{{postuser.photo}}" width="15rem" height="300px"  alt="Card image cap">
                 <p class="card-text">{{postuser.post}}</p>
                 <a href="{{postuser.photo}}" target="_blank"   class="btn btn-primary">Ampliar imagen</a>
             </div>
