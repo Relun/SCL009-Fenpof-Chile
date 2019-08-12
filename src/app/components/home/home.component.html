@@ -1,4 +1,4 @@
-<section class="event_testimony row justify-content-between">
+<div class="event_testimony row">
 
   <!-- Eventos -->
 
@@ -20,46 +20,55 @@
     <a class="see_more" routerLink="/events">Ver más</a>
   </div>
 
-
   <!-- testimonios -->
 
-  <div class="testmony col col-sm-12 col-md-3">
-        <h2>testimonios</h2>
-        <div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate ab unde non reiciendis odio, obcaecati
-            beatae perspiciatis. Obcaecati, dolor. Dolore delectus optio illum. Ab cupiditate eius labore minus, dolores
-            quasi!
-          </p>
-        </div>
-        <br>
-        <div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate ab unde non reiciendis odio, obcaecati
-            beatae perspiciatis. Obcaecati, dolor. Dolore delectus optio illum. Ab cupiditate eius labore minus, dolores
-            quasi!
-          </p>
-        </div>
-        <br>
-        <div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate ab unde non reiciendis odio, obcaecati
-            beatae perspiciatis. Obcaecati, dolor. Dolore delectus optio illum. Ab cupiditate eius labore minus, dolores
-            quasi!
-          </p>
-        </div>
+  <div class="testimony col col-sm-12 col-md-3">
+    <h3>Testimonios</h3>
+    <div class="card">
+      <div class="card-body">
+        <p class="card-text">“Existían médicos que creían conocer mi diagnóstico, ya muchos de los servicios públicos no
+          tienen los medios para confirmarlo con exámenes genéticos.
+          Yo me demore cerca de 4 años en confirmar mi diagnóstico más certero, lo que es un tiempo bastante más corto
+          en comparación a otros pacientes”
+        </p>
+        <footer class="blockquote-footer">Paciente <cite title="Source Title"></cite></footer>
+      </div>
+    </div>
+    <br>
+    <div class="card">
+      <div class="card-body">
+        <p>
+          “Es muy difícil para nosotros y nuestras familias el tener una enfermedad poco
+          frecuente en este país donde muchas veces no tenemos código fonasa, yo no puedo
+          comprar un bono por distrofia muscular porque no existe, debemos atendernos por
+          otra cosa en forma particular”
+        </p>
+        <footer class="blockquote-footer">Paciente de distrofia muscular <cite title="Source Title"></cite></footer>
+      </div>
+    </div>
+    <br>
+    <div class="card">
+      <div class="card-body">
+        <p class="card-text">“Todas las organizaciones tienen distintos objetivos,
+          pero con FENPOF podemos unirlas y lograr lo principal que es visibilizar
+          nuestra causa demostrando que no somos invisibles”
+        </p>
+        <footer class="blockquote-footer">Lider de Organizacion <cite title="Source Title"></cite></footer>
+      </div>
+    </div>
+    <a class="see_more" routerLink="/support">Ver más</a>
   </div>
 
-</section>
+  <!-- organizaciones -->
+  <section class="row container_org">
 
-<!-- organizaciones -->
-<section class="row container_org">
-  <div class="col col-sm-12 col-md-12">
-    <h2>organizaciones:</h2>
-  </div>
+    <div class="title_org col col-sm-12 col-md-12">
+      <h2>Organizaciones:</h2>
+    </div>
 
-  <div *ngFor="let images of imgOrg" class="img_org col col-sm-12 col-md-2">
-    <img src="{{images.image}}">
-    <p class="name_org"><strong>{{images.id}}</strong></p>
-  </div>
-</section>
+    <div *ngFor="let images of imgOrg" class="img_org col col-sm-12 col-md-2">
+      <img src="{{images.image}}" alt="{{images.id}}">
+      <p class="name_org"><strong>{{images.id}}</strong></p>
+    </div>
+
+  </section>
