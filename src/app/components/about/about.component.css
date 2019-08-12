@@ -10,7 +10,7 @@
 }
 
 .main_image_about img {
-  width: 44em;
+  width: 50em;
 }
 
 .text_about {
@@ -18,19 +18,39 @@
   text-align: justify;
 }
 
-.text_about h1, h2{
-    text-align: center;
-  }
-
-.text_about h1{
-    margin-left: 50%;
+.text_about h1,
+h2 {
+  text-align: center;
 }
 
-  .text_about p{
-      margin: 2em 0em 3em 25em;
-  }
+.text_about p {
+  margin-top: 2em;
+  padding-bottom: 5em;
+  border-bottom: .2em solid #A2C7E2;
+}
+
+.mision {
+  border-right: .2em dotted #A2C7E2;
+}
+
+.mision,
+.vision {
+  padding-bottom: 2em;
+  margin-bottom: 5em;
+  margin-top: 3em;
+}
+
+.text_about p,
+.mision p,
+.vision p {
+  margin: 1em 3em 2em 3em;
+}
 
 @media (max-width: 768px) {
+
+  * {
+    margin: 0;
+  }
 
   .main_image_about .about-imag {
     width: 100%;
@@ -38,21 +58,31 @@
     margin: 0%;
   }
 
-  .text_about {
-      margin-top: 2em;
-  }
-  
-.text_about h1{
-margin-left: 0%;
-}
-
-  .text_about h1, h2{
-      margin-bottom: .30em;
+  .text_about p {
+    margin-top: 2em;
   }
 
-  .text_about p{
-      margin: 0em .70em;
-      margin-bottom: 2em;
+  .text_about h1,
+  h2 {
+    margin-bottom: .30em;
   }
+
+  .text_about p,
+  .mision p,
+  .vision p {
+    margin: 0em .70em;
+    margin-bottom: 2em;
+  }
+
+  .mision {
+    border-right: none;
+    border-bottom: .2em dotted #A2C7E2;
+  }
+
+  /* .mision p{
+    margin: 0%;
+    margin-bottom: 3em;
+    padding: 0%;
+  } */
 
 }

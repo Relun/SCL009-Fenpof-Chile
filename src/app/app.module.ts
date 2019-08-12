@@ -34,6 +34,8 @@ import { ImagesComponent } from './components/administrator/images/images.compon
 import { ImageListComponent } from './components/administrator/images/image-list/image-list.component';
 import { ImageComponent } from './components/administrator/images/image/image.component';
 import { HomeComponent } from './components/home/home.component';
+import { PaginatePipe } from './pipes/paginate.pipe';
+import { TestimonyPipe } from './pipes/testimony.pipe';
 
 
 
@@ -55,7 +57,9 @@ import { HomeComponent } from './components/home/home.component';
     ImagesComponent,
     ImageListComponent,
     ImageComponent,
-    HomeComponent
+    HomeComponent,
+    PaginatePipe,
+    TestimonyPipe
   ],
   imports: [
     BrowserModule,
