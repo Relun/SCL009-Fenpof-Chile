@@ -1,2 +1,14 @@
+<br><br>
+<ngb-accordion #acc="ngbAccordion"  activeIds="config-panel-one" style="width:75%" >
+      <div *ngFor = 'let item of information' >
+        <ngb-panel  id="toggle-{{item.id}}" title='{{item.question}}'>
+          <ng-template ngbPanelContent>
+              <p 
+              style="font-style: italic" [innerHTML]="item.answer"></p>
+           
+          </ng-template>
+        </ngb-panel>
+      </div>
+</ngb-accordion>
 
-<img src="../../../assets/imgregistrelogin/section_pregFrec.png" alt="">
+     

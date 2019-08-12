@@ -1,3 +1,7 @@
-.section{
-    background-image: url(../../../assets/imgregistrelogin/section_pregFrec.png)
+
+.question.bg-danger{
+    background-color: darkgray !important;
+}
+.bg-danger{
+    background-color: darkgray !important;
 }
