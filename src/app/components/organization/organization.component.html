@@ -1,8 +1,8 @@
-
-<div  *ngFor="let Data of posts" class="card mb-3" style="max-width: 1000px; margin-left: 80px; margin-right: 80px; margin-top: 40px;" >
+<div class="container">
+<div  *ngFor="let Data of posts" class="card mb-3" >
   <div class="row no-gutters">
     <div class="col-md-4">
-      <img src="{{Data.image}}" class="card-img" alt="{{Data.id}}">
+      <img src="{{Data.image}}" class="card-img img-fluid" alt="{{Data.id}}">
     </div>
     <div class="col-md-8">  
       <div class="card-body">
@@ -15,4 +15,5 @@
       </div>
     </div>
   </div>
+</div>
 </div>

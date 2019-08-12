@@ -43,13 +43,13 @@ info: 'Nuestra misión es poder informar sobre los diferentes trastornos y displ
  representative:'Jessica Cubillos',
  contact: 56949209820, 
  email:'caminamosporellasyellos@gmail.com',
- image:'./assets/img/caminemospor.jpg',
+ image:'./assets/img/caminemospor.png',
  info:'Familias con hijos que tienen Síndrome de Rett, nos estamos organizando para crear visibilidad de este, a través de diversas actividades informativas y recreativas'
  
  }, 
 
  { id: 'Corporación Chiari Chile',
-website:'twitter.com/chiarichile',
+website:'www.facebook.com/groups/22609054444/',
 representative:'Ana Leikin',
 contact: 56942388910, 
 email:'ana.leikin@gmail.com',
@@ -104,7 +104,7 @@ info:'Somos familias dedicadas a nuestros hijos con NEE, dispuestos a aprender, 
 },
 
 { id: 'Terapeuta Ocupacional', 
-website:'',
+website:'es-la.facebook.com/FenpofChile/',
 representative:'Sebastian Gallegos',
 contact: 56992710137, 
 email:'to.sgallegosb@gmail.com',
