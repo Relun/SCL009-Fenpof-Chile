@@ -1,11 +1,13 @@
-.card {
+.card{
     max-width: 63em; 
     margin-left: 5em;
     margin-right: 5em;
     margin-top: 2em;
 }
 h3{
-    color: #A2C7E2;
+    color:   rgb(146, 188, 218);
+    /* color: rgb(112, 152, 180); */
+    /* color: #A2C7E2; */
 }
 
 .card-img{
@@ -16,12 +18,14 @@ h3{
 }
 
 .btn{
-    background-color: #A2C7E2;
+    background-color:rgb(146, 188, 218); 
+    /* background-color: rgb(112, 152, 180); */
+    /* background-color:  #A2C7E2; */
     color: whitesmoke;
 
 }
 
-@media (max-width:320px){
+@media (max-width:374px){
 
     .card {
         max-width: 63em; 
@@ -49,6 +53,6 @@ h3{
         border-radius: 100%;
         width: 13em;
         height: 13em;
-        /* margin: 1em; */
+       
     }
   }
