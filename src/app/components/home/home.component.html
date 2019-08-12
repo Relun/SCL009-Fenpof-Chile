@@ -3,7 +3,7 @@
   <!-- Eventos -->
 
   <div class="events_container col col-sm-12 col-md-7">
-    <ul *ngFor="let postuser of published_event | paginate: page_size:page_number">
+    <ul *ngFor="let postuser of published_event | paginate: page_size">
       <div class="contenedor-card">
         <div class="card bg-light mb-3 container">
           <div class="card-header"></div>
@@ -52,15 +52,6 @@
 
 </section>
 
-<!-- <div class="row">
-     "¿Qué es Fempof resumen"
-    <div class="fempof_summary col col-sm-12 col-md-3">
-        <p>La federación agrupa a las distintas organizaciones de enfermedades poco frecuentes con la finalidad de trabajar de manera conjunta es visibilizar, concientizar y educar.
-          También buscan incidir en políticas públicas, que ayuden a mejorar la calidad de vida de cada una de las personas que viven con algún tipo de enfermedad poco frecuente, creando redes de apoyo tanto en chile como en el extranjero. 
-          </p>
-      </div>    
-</div> -->
-
 <!-- organizaciones -->
 <section class="row container_org">
   <div class="col col-sm-12 col-md-12">
@@ -68,7 +59,7 @@
   </div>
 
   <div *ngFor="let images of imgOrg" class="img_org col col-sm-12 col-md-2">
-    <img src="{{images.image}}" alt="{{images.id}}">
+    <img src="{{images.image}}">
     <p class="name_org"><strong>{{images.id}}</strong></p>
   </div>
 </section>
