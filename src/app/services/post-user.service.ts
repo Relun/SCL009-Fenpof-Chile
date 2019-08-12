@@ -39,6 +39,7 @@ this.commentaryCollection = this.afs.collection('commentary');  //Inicia la cole
           console.log("a " + a)
           const data = a.payload.doc.data() as Postuser;
              data.idFireStore = a.payload.doc.id;
+             data.photo = 'https://firebasestorage.googleapis.com/v0/b/fenfop-chile-c0ea2.appspot.com/o/eventos%2F_1565588335794?alt=media&token=729a5dc9-c8e1-4cb6-970c-9de9e12279ec'; // aqui va lo de la paty
               console.log(data);
           return data;    
       });
@@ -57,7 +58,9 @@ addPost(postuser : Postuser) {
                             {   id : postuser.id,
                                 idFireStore : '',
                                 post : postuser.post,
-                                fecha : Date.now()                        
+                                fecha : Date.now(),
+                                myPostTitle : postuser.myPostTitle,
+                                photo : postuser.photo               
                               }
                                 
                               ).then( _ => alert("Evento publicado") ); // add es una promesa de firebase

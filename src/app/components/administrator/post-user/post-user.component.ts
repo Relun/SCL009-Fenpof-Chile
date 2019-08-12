@@ -145,27 +145,28 @@ export class PostUserComponent implements OnInit {
     } 
   */
   /*Funcion para crear post y que se guarde en firestore */
-  sendPost(mypost: string): void {
+/*  sendPost(mypost: string): void {
     console.log("Llego hasta sendPost");
     /*llamar a la funcion del servicio, para indicarle que debe enviar este post
-     a firebase*/
+     a firebase
     console.log("MYPOST : " + mypost);
     this.createPost = new Postuser('0', mypost, 'fire'); // crear una nueva instancia en cada post
     //this.createPost.post = mypost;
     console.log("CREATEPOST  : " + JSON.stringify(this.createPost));
     this.postUserService.addPost(this.createPost);
-  }
+} */
 
 
 
 /*Funcion para crear post y que se guarde en firestore */
-sendPost2(mypost): void  {
+sendPost2(mypost, myPostTitle): void  {
   console.log("Llego hasta sendPost", mypost );
  /*llamar a la funcion del servicio, para indicarle que debe enviar este post
   a firebase*/
   console.log(mypost);
-  this.createPost = new Postuser('0', mypost.value, 'fire'); // crear una nueva instancia en cada post
+  this.createPost = new Postuser('0', mypost.value, '', myPostTitle.value, ''); // crear una nueva instancia en cada post
   mypost.value = '';
+  myPostTitle.value = '';
  // mypost.placeholder="sdfsdfsdfsdfdsfdsfaqui su noticia";
   //this.createPost.post = mypost;
 
