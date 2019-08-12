@@ -1,7 +1,4 @@
-.imgpeque{
-    width: 150px; height: 100px;
 
-}
 .aaa{
     background: white;
 }
@@ -13,16 +10,13 @@ h3{
     color: #A2C7E2;
 }
 
-/* p{
-    color: black; 
-    font-weight: bold;
-} */
-.img_org img{
+.card-img{
     border-radius: 100%;
-    width: 7em;
-    height: 7em;
+    width: 15em;
+    height: 15em;
     margin: 1em;
 }
+
 .btn{
     background-color: #A2C7E2;
     color: whitesmoke;

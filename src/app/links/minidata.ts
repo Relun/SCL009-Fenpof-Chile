@@ -7,7 +7,7 @@ export const DATA: Data[] = [
   representative:'Víctor Rodríguez',
   contact: 56981873224, 
   email:'menkeschile@gmail.com',
-  image:'.\assets\img\menkes-chile.png',
+  image:'./assets/img/menkeschile.jpg',
   info: 'Agrupación Menkes Chile se enfoca en agrupar a familias para entregarles acompañamiento en el proceso'
 },  
     
@@ -16,7 +16,7 @@ export const DATA: Data[] = [
   representative:'Cristian Quijada',
   contact: 56968523162, 
   email:'agrupacionsvkhchile@gmail.com',
-  image:'.\assets\img\svkh.jpg',
+  image:'./assets/img/svkh.jpg',
   info: 'La agrupación está enfocada en crear conciencia de este Síndrome el cual no es muy conocido'
 },   
 
@@ -25,7 +25,7 @@ website:'fundacionfucolch.webnode.cl/?fbclid=IwAR0HwRpRowoj-ZDPd__3yTX2XAPknVocd
 representative:'Anahí Chacana',
 contact: 56950252894, 
 email:'anahichacana@gmail.com',
-image:'.\assets\img\colagenopatias.png',
+image:'./assets/img/colagenopatias.png',
 info: 'Nuestra misión es poder informar sobre los diferentes trastornos y displasias esqueléticas asociadas a la mutación del gen COL2A1, siendo apoyados constantemente por FENPOF'
  },
 
@@ -34,7 +34,7 @@ info: 'Nuestra misión es poder informar sobre los diferentes trastornos y displ
  representative:'Jose Manuel Pozuelo',
  contact: 56973949029, 
  email:'josempozuelo@gmail.com',
- image:'.\assets\img\nadafrecuente.png',
+ image:'./assets/img/nada-frec.jpg',
  info:'Asociación de Familiares y afectados por enfermedades poco frecuentes. Concepción'  
  }, 
 
@@ -43,7 +43,7 @@ info: 'Nuestra misión es poder informar sobre los diferentes trastornos y displ
  representative:'Jessica Cubillos',
  contact: 56949209820, 
  email:'caminamosporellasyellos@gmail.com',
- image:'.\assets\img\caminemospor.jpg',
+ image:'./assets/img/caminemospor.jpg',
  info:'Familias con hijos que tienen Síndrome de Rett, nos estamos organizando para crear visibilidad de este, a través de diversas actividades informativas y recreativas'
  
  }, 
@@ -53,7 +53,7 @@ website:'twitter.com/chiarichile',
 representative:'Ana Leikin',
 contact: 56942388910, 
 email:'ana.leikin@gmail.com',
-image:'.\assets\img\chiari.jpg',
+image:'./assets/img/coprchiari.png',
 info: 'Este grupo es la instancia para compartir información y apoyarnos en los momentos difíciles. Si conoces alguien con Chiari o has sido diagnosticado eres muy bienvenido a contarnos tus experiencias'
 },
 
@@ -62,7 +62,7 @@ website:'dimuschile.cl',
 representative:'Igor Navarrete',
 contact: 56957202342, 
 email:'i.navarrete.r@gmail.com',
-image:'.\assets\img\dimus.jpg',
+image:'./assets/img/Dimus-Chile.jpg',
 info: 'Dimus Chile es una asociación civil sin fines de lucro orientada al área social y médica de pacientes con Distrofia Muscular, que nace producto de las infinitas necesidades que tiene una persona con una enfermedad Neuromuscular y el escaso apoyo que existe por parte de los organismos públicos y privados hacia este tipo de pacientes'
 },
 
@@ -71,7 +71,7 @@ website:'famechile.cl',
 representative:'Paulina Gonzalez',
 contact: 56972789425, 
 email:'presidente@famechile.cl',
-image:'./assets/img/fame.png',
+image:'./assets/img/famechile.png',
 info: 'Fame Chile agrupa a las familias con niños y adultos afectados de esta enfermedad, con el propósito de acoger, contener, orientar y organizar el acceso de las familias a la información, estudios clínicos, desarrollo de nuevas terapias y a su inserción en la sociedad chilena'
 },
 
@@ -80,7 +80,7 @@ website:'www.facebook.com/Fundaci%C3%B3n-ADN-Chile-2030411287201462',
 representative:'Marcela Gonzalez',
 contact: 56975434456, 
 email:'presidenta.adnchile@gmail.com',
-image:'.\assets\img\adnfundacion.jpg',
+image:'./assets/img/adnchile.png',
 info: 'Fundación ADN Chile distrofias musculares, se conforma por la fundadora y Presidenta Marcela González, Secretario Hugo Correa y la Tesorera Claudia Palma'
 },
 
@@ -89,7 +89,7 @@ info: 'Fundación ADN Chile distrofias musculares, se conforma por la fundadora 
  representative:'Caroline Hernandez',
   contact: 56961537955, 
   email:'lifangiomachile@gmail.com',
-  image:'.\assets\img\linfangioma.png',
+  image:'./assets/img/linfangioma.png',
   info: 'La Fundación Linfangioma Chile es una organización con personalidad jurídica sin fines de lucro chilena,que busca brindar orientación y ayuda psicosocial a los pacientes que presenten linfangioma o Malformación linfática (ML) y a sus familias'
 
  },
@@ -99,7 +99,7 @@ website:'www.picimon.com/fundacion.otras.miradas',
 representative:'Paulina Saez',
 contact: 56996781226, 
 email:'fotrasmiradas@gmail.com',
-image:'.\assets\img\otras-miradas.png',
+image:'./assets/img/otrasmiradas.png',
 info:'Somos familias dedicadas a nuestros hijos con NEE, dispuestos a aprender, sensibilizar, concientizar, crear, y avanzar juntos por el camino de la vida'
 },
 
@@ -108,8 +108,8 @@ website:'',
 representative:'Sebastian Gallegos',
 contact: 56992710137, 
 email:'to.sgallegosb@gmail.com',
-image:'',
-info: ''
+image:'./assets/img/terapeuta.png',
+info: 'Asesor en Terapia Ocupacional '
 },
 
 ]
